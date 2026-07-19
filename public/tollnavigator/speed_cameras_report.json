@@ -1,0 +1,3883 @@
+{
+  "generated": "2026-07-19T11:57:27.995937+00:00",
+  "average_relations_total": 422,
+  "average_relations_ok": 391,
+  "average_relations_skipped": 31,
+  "fixed_duplicates_removed": 186,
+  "removed_fixed_duplicates": [
+    {
+      "id": "sc_21420719",
+      "lat": 50.0374785,
+      "lon": 14.4010416,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_1484672597",
+      "lat": 50.0357311,
+      "lon": 14.394808,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_2512158365",
+      "lat": 50.0868066,
+      "lon": 14.537444,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_2571209128",
+      "lat": 49.9972075,
+      "lon": 14.396649,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_2571209129",
+      "lat": 50.001858,
+      "lon": 14.3954141,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_3784724084",
+      "lat": 49.9108424,
+      "lon": 14.5833557,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_3941958337",
+      "lat": 50.0548275,
+      "lon": 14.3718884,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_3941965878",
+      "lat": 50.0504288,
+      "lon": 14.3642789,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_3969268057",
+      "lat": 50.1713285,
+      "lon": 14.483901,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_3969269052",
+      "lat": 50.1658822,
+      "lon": 14.4838707,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_4582873813",
+      "lat": 50.5881801,
+      "lon": 15.1442331,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_4829044235",
+      "lat": 50.0926986,
+      "lon": 14.3208893,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_5532907494",
+      "lat": 50.0348612,
+      "lon": 14.383769,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_5532907496",
+      "lat": 50.0361558,
+      "lon": 14.3856418,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_5533014494",
+      "lat": 50.0360584,
+      "lon": 14.3900849,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_5594277972",
+      "lat": 49.8367441,
+      "lon": 18.1913413,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_5594277974",
+      "lat": 49.8285711,
+      "lon": 18.1959121,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_5663760408",
+      "lat": 54.212164,
+      "lon": 24.4047051,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_6320394152",
+      "lat": 49.9882589,
+      "lon": 14.7679372,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_6320394154",
+      "lat": 49.9880877,
+      "lon": 14.7719754,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_6339431864",
+      "lat": 49.7945184,
+      "lon": 14.190033,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_6339431866",
+      "lat": 49.79296,
+      "lon": 14.1881481,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_6989315114",
+      "lat": 49.9887698,
+      "lon": 14.7612438,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_6989315116",
+      "lat": 49.9890922,
+      "lon": 14.756617,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_6994529817",
+      "lat": 49.9703454,
+      "lon": 14.6930451,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_6994529819",
+      "lat": 49.9677844,
+      "lon": 14.6892403,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_6994549958",
+      "lat": 49.9060195,
+      "lon": 14.5896814,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_6994675167",
+      "lat": 49.8946213,
+      "lon": 14.6136214,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_6994675169",
+      "lat": 49.8926817,
+      "lon": 14.618336,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_6994684859",
+      "lat": 49.9600849,
+      "lon": 14.6793571,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_6994684861",
+      "lat": 49.9591118,
+      "lon": 14.6842061,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_7139344379",
+      "lat": 49.7863305,
+      "lon": 14.1664343,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_7594372912",
+      "lat": 50.5505502,
+      "lon": 15.2146174,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_7611752325",
+      "lat": 54.5777869,
+      "lon": 24.1054593,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_7611752328",
+      "lat": 54.585851,
+      "lon": 24.0393274,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_7629009697",
+      "lat": 49.9470405,
+      "lon": 15.2506822,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_7629009698",
+      "lat": 49.9476757,
+      "lon": 15.2564426,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_7647467113",
+      "lat": 50.5869382,
+      "lon": 15.145002,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_7766235120",
+      "lat": 50.2233365,
+      "lon": 15.0274871,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_7766235121",
+      "lat": 50.2158388,
+      "lon": 15.030695,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_8499213944",
+      "lat": 54.5685538,
+      "lon": 23.9050698,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_8499213945",
+      "lat": 54.5407363,
+      "lon": 23.8858223,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_8499214147",
+      "lat": 54.1823623,
+      "lon": 24.2892587,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_8595803954",
+      "lat": 50.0360536,
+      "lon": 14.3850974,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_8608112441",
+      "lat": 54.4370596,
+      "lon": 23.9905544,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9026339529",
+      "lat": 49.8664274,
+      "lon": 15.4398866,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9026388192",
+      "lat": 49.8713412,
+      "lon": 15.4351986,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9107875955",
+      "lat": 49.7949093,
+      "lon": 18.1214578,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9107875957",
+      "lat": 49.7905529,
+      "lon": 18.1131316,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9107875959",
+      "lat": 49.790686,
+      "lon": 18.1129502,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9107875961",
+      "lat": 49.7950699,
+      "lon": 18.1212924,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9253246972",
+      "lat": 49.6240917,
+      "lon": 15.6824295,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9253325648",
+      "lat": 49.6277499,
+      "lon": 15.6848831,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9273093555",
+      "lat": 49.2179954,
+      "lon": 17.6073432,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9273093556",
+      "lat": 49.2197997,
+      "lon": 17.6179765,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9276215946",
+      "lat": 49.9756652,
+      "lon": 14.5870688,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9276260917",
+      "lat": 49.9621434,
+      "lon": 14.5022208,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9276260918",
+      "lat": 49.9672923,
+      "lon": 14.4948909,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9277548904",
+      "lat": 49.9656702,
+      "lon": 14.4961064,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9277548905",
+      "lat": 49.9605254,
+      "lon": 14.5094609,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9277548907",
+      "lat": 49.9754346,
+      "lon": 14.5869307,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9281450311",
+      "lat": 50.0928561,
+      "lon": 14.3169501,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9283796193",
+      "lat": 49.2662394,
+      "lon": 16.9800118,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9283796194",
+      "lat": 49.2714982,
+      "lon": 16.989014,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9288495584",
+      "lat": 49.8396284,
+      "lon": 14.6822014,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9288495585",
+      "lat": 49.8124188,
+      "lon": 14.6819148,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9288574012",
+      "lat": 50.0670093,
+      "lon": 14.7353236,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9288574013",
+      "lat": 50.0687558,
+      "lon": 14.7335968,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9289666507",
+      "lat": 49.8652915,
+      "lon": 16.3232338,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9289666508",
+      "lat": 49.8616239,
+      "lon": 16.3138831,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9289666509",
+      "lat": 49.8649552,
+      "lon": 16.3119336,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9289666510",
+      "lat": 49.867508,
+      "lon": 16.3097013,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9289854696",
+      "lat": 49.7831379,
+      "lon": 18.4341408,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9289854697",
+      "lat": 49.7858538,
+      "lon": 18.4375958,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9289882637",
+      "lat": 49.787511,
+      "lon": 18.3995715,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9289882638",
+      "lat": 49.7878036,
+      "lon": 18.4033643,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9308980307",
+      "lat": 50.0902474,
+      "lon": 14.3845113,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9308998318",
+      "lat": 50.1139443,
+      "lon": 14.428929,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9309000267",
+      "lat": 50.0979181,
+      "lon": 14.4080947,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9321332115",
+      "lat": 50.0937444,
+      "lon": 14.393533,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9321460612",
+      "lat": 50.0983269,
+      "lon": 14.4161242,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9330316306",
+      "lat": 49.8265399,
+      "lon": 14.79887,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9330316307",
+      "lat": 49.8261582,
+      "lon": 14.7971271,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9332195552",
+      "lat": 54.2841128,
+      "lon": 24.1467671,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9332195553",
+      "lat": 54.359105,
+      "lon": 24.1430259,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9332207483",
+      "lat": 54.2342384,
+      "lon": 23.8065087,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9332207484",
+      "lat": 54.2378512,
+      "lon": 23.8210057,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9332218905",
+      "lat": 54.4471258,
+      "lon": 24.1158371,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9332218906",
+      "lat": 54.4971267,
+      "lon": 24.1322733,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9332316011",
+      "lat": 54.9503295,
+      "lon": 23.7437646,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9350395160",
+      "lat": 54.9153129,
+      "lon": 23.7380421,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9350395161",
+      "lat": 54.8996687,
+      "lon": 23.7662225,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9350437177",
+      "lat": 54.4658898,
+      "lon": 23.9424477,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9350485587",
+      "lat": 54.7486233,
+      "lon": 23.6744422,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9350485588",
+      "lat": 54.7606158,
+      "lon": 23.7100351,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9350528574",
+      "lat": 54.6014854,
+      "lon": 23.1986647,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9350528575",
+      "lat": 54.5906732,
+      "lon": 23.2362364,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9350534018",
+      "lat": 54.44102,
+      "lon": 23.3979827,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9350534019",
+      "lat": 54.471561,
+      "lon": 23.3646299,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358423150",
+      "lat": 54.9730275,
+      "lon": 24.0122869,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358423463",
+      "lat": 54.8028506,
+      "lon": 24.1147498,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358423464",
+      "lat": 54.841455,
+      "lon": 24.0514195,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358431999",
+      "lat": 54.3681862,
+      "lon": 24.3684342,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358432000",
+      "lat": 54.352682,
+      "lon": 24.4483624,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358446029",
+      "lat": 54.3678753,
+      "lon": 24.1500409,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358446030",
+      "lat": 54.3645398,
+      "lon": 24.3263251,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358502142",
+      "lat": 54.5587778,
+      "lon": 23.6735225,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358502143",
+      "lat": 54.5905822,
+      "lon": 23.8289046,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358509005",
+      "lat": 54.0340222,
+      "lon": 24.0784356,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358509006",
+      "lat": 54.1662142,
+      "lon": 24.2086567,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358515136",
+      "lat": 54.2250934,
+      "lon": 24.429176,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358546048",
+      "lat": 54.6598439,
+      "lon": 23.050964,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358546049",
+      "lat": 54.6899082,
+      "lon": 23.1348792,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9376393868",
+      "lat": 50.6796295,
+      "lon": 14.0084564,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9376393869",
+      "lat": 50.6786787,
+      "lon": 14.0098067,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9376393870",
+      "lat": 50.6761345,
+      "lon": 14.0143917,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9376393871",
+      "lat": 50.6755642,
+      "lon": 14.0152297,
+      "reason": "near_opp_endpoint"
+    },
+    {
+      "id": "sc_9376393872",
+      "lat": 50.6753928,
+      "lon": 14.0150988,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9385385485",
+      "lat": 50.5521995,
+      "lon": 15.2125283,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9385393439",
+      "lat": 50.6372108,
+      "lon": 15.1892866,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9385393440",
+      "lat": 50.6372181,
+      "lon": 15.1892416,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9385393441",
+      "lat": 50.6424996,
+      "lon": 15.1932573,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9385393442",
+      "lat": 50.6424818,
+      "lon": 15.1932936,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9385407022",
+      "lat": 50.5897309,
+      "lon": 15.1651781,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9385407023",
+      "lat": 50.5900155,
+      "lon": 15.1677413,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9385439807",
+      "lat": 50.5196646,
+      "lon": 15.2479204,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9385439808",
+      "lat": 50.5180485,
+      "lon": 15.249794,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9394894818",
+      "lat": 50.1139254,
+      "lon": 14.4356231,
+      "reason": "near_opp_endpoint"
+    },
+    {
+      "id": "sc_9394894819",
+      "lat": 50.1138295,
+      "lon": 14.4356681,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9403540002",
+      "lat": 50.5522166,
+      "lon": 15.2125682,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9403540003",
+      "lat": 50.550529,
+      "lon": 15.2145698,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9404364618",
+      "lat": 49.8652,
+      "lon": 16.32373,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9404364626",
+      "lat": 49.8662497,
+      "lon": 16.316588,
+      "reason": "near_opp_endpoint"
+    },
+    {
+      "id": "sc_9404413982",
+      "lat": 49.8724822,
+      "lon": 16.3064654,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9471658190",
+      "lat": 49.9716319,
+      "lon": 14.5718078,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9471658194",
+      "lat": 49.9724788,
+      "lon": 14.5743959,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9590825458",
+      "lat": 50.3816141,
+      "lon": 15.959284,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9590825461",
+      "lat": 50.3802592,
+      "lon": 15.9547433,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_10202511748",
+      "lat": 49.1661076,
+      "lon": 16.8442739,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_10202511750",
+      "lat": 49.1680312,
+      "lon": 16.8409202,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_10213753369",
+      "lat": 50.0186215,
+      "lon": 14.8712627,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_10213809763",
+      "lat": 50.0157294,
+      "lon": 14.8702344,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11167898927",
+      "lat": 54.6653604,
+      "lon": 23.9495054,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11167931319",
+      "lat": 54.7215882,
+      "lon": 23.9531229,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11168986469",
+      "lat": 54.7466196,
+      "lon": 23.9234842,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11168986500",
+      "lat": 54.7244345,
+      "lon": 23.9514805,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11168986556",
+      "lat": 54.739984,
+      "lon": 23.9327454,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11168986761",
+      "lat": 54.8083184,
+      "lon": 23.865734,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11265075043",
+      "lat": 49.6009592,
+      "lon": 16.0731375,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11265075045",
+      "lat": 49.5971401,
+      "lon": 16.0711652,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11375311455",
+      "lat": 49.8211632,
+      "lon": 14.734915,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11375311463",
+      "lat": 49.8223945,
+      "lon": 14.7388032,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11466459783",
+      "lat": 49.276687,
+      "lon": 16.9775948,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11466459784",
+      "lat": 49.2762192,
+      "lon": 16.9870861,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11466653259",
+      "lat": 49.2734732,
+      "lon": 16.9801144,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11466653260",
+      "lat": 49.2671741,
+      "lon": 16.9776658,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11576825726",
+      "lat": 49.7569275,
+      "lon": 14.666561,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11576825727",
+      "lat": 49.759119,
+      "lon": 14.6579242,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11586626179",
+      "lat": 49.5888739,
+      "lon": 15.542146,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11586626180",
+      "lat": 49.5880722,
+      "lon": 15.5413632,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11936984449",
+      "lat": 50.5216217,
+      "lon": 16.2146904,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11936984450",
+      "lat": 50.5181777,
+      "lon": 16.2141681,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_11987452233",
+      "lat": 49.21779,
+      "lon": 17.6200085,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12030964547",
+      "lat": 49.6206577,
+      "lon": 15.0518308,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12030964548",
+      "lat": 49.6189153,
+      "lon": 15.0532604,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12284893519",
+      "lat": 50.0911688,
+      "lon": 14.5337592,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12438518705",
+      "lat": 50.4545239,
+      "lon": 16.1333803,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12438518706",
+      "lat": 50.4528717,
+      "lon": 16.1346813,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12590145846",
+      "lat": 49.2844482,
+      "lon": 16.5687884,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12626376623",
+      "lat": 49.3139729,
+      "lon": 16.5517389,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12626385507",
+      "lat": 49.318377,
+      "lon": 16.5519192,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12791869547",
+      "lat": 49.7863238,
+      "lon": 14.1664306,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12791876202",
+      "lat": 49.7854754,
+      "lon": 14.169645,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12791876203",
+      "lat": 49.7854657,
+      "lon": 14.1696308,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12802486764",
+      "lat": 49.4440395,
+      "lon": 18.4588196,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12802486767",
+      "lat": 49.4409461,
+      "lon": 18.447608,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_12877117406",
+      "lat": 49.2845133,
+      "lon": 16.5688827,
+      "reason": "near_opp_endpoint"
+    },
+    {
+      "id": "sc_13078231610",
+      "lat": 49.2897892,
+      "lon": 16.588368,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_13309700796",
+      "lat": 49.5390957,
+      "lon": 15.3768051,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_13309700798",
+      "lat": 49.5430736,
+      "lon": 15.3906812,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_13429315271",
+      "lat": 49.8985144,
+      "lon": 14.6022778,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_13936928632",
+      "lat": 49.664615,
+      "lon": 18.424695,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_13936928634",
+      "lat": 49.6577986,
+      "lon": 18.4281346,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358515137",
+      "lat": 54.2537757,
+      "lon": 24.5388728,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9332316010",
+      "lat": 55.0362985,
+      "lon": 23.6089705,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_9358423149",
+      "lat": 55.0693224,
+      "lon": 24.1365101,
+      "reason": "member_of_successful_opp"
+    }
+  ],
+  "reports": [
+    {
+      "relation_id": 3366897,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 564.4
+    },
+    {
+      "relation_id": 3367065,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 524.6
+    },
+    {
+      "relation_id": 3367241,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 905.8
+    },
+    {
+      "relation_id": 3367242,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 476.9
+    },
+    {
+      "relation_id": 6694778,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3734.3
+    },
+    {
+      "relation_id": 6694779,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3734.3
+    },
+    {
+      "relation_id": 6694827,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2437.9
+    },
+    {
+      "relation_id": 6694828,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2437.9
+    },
+    {
+      "relation_id": 6694845,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3004.4
+    },
+    {
+      "relation_id": 6694846,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3004.4
+    },
+    {
+      "relation_id": 6694890,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2042.8
+    },
+    {
+      "relation_id": 6694891,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2038.8
+    },
+    {
+      "relation_id": 6696774,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2597.9
+    },
+    {
+      "relation_id": 6696775,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2597.9
+    },
+    {
+      "relation_id": 6696787,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2732.9
+    },
+    {
+      "relation_id": 6696788,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2732.9
+    },
+    {
+      "relation_id": 6696909,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1753.3
+    },
+    {
+      "relation_id": 6696910,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1753.3
+    },
+    {
+      "relation_id": 6697027,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2833.0
+    },
+    {
+      "relation_id": 6697028,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2833.0
+    },
+    {
+      "relation_id": 6697143,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3205.7
+    },
+    {
+      "relation_id": 6697144,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3205.7
+    },
+    {
+      "relation_id": 6697168,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2115.2
+    },
+    {
+      "relation_id": 6697169,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2115.2
+    },
+    {
+      "relation_id": 6698906,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1370.7
+    },
+    {
+      "relation_id": 6698907,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1370.7
+    },
+    {
+      "relation_id": 6698927,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 995.2
+    },
+    {
+      "relation_id": 6698928,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 995.2
+    },
+    {
+      "relation_id": 6698963,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2199.1
+    },
+    {
+      "relation_id": 6698964,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2199.1
+    },
+    {
+      "relation_id": 6698981,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 765.7
+    },
+    {
+      "relation_id": 6698982,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 765.7
+    },
+    {
+      "relation_id": 6698983,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 842.5
+    },
+    {
+      "relation_id": 6698984,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 842.5
+    },
+    {
+      "relation_id": 6699009,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2851.3
+    },
+    {
+      "relation_id": 6699010,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2851.3
+    },
+    {
+      "relation_id": 6699016,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3875.1
+    },
+    {
+      "relation_id": 6699017,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3875.1
+    },
+    {
+      "relation_id": 6699080,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4288.7
+    },
+    {
+      "relation_id": 6699081,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4279.1
+    },
+    {
+      "relation_id": 6699086,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2470.1
+    },
+    {
+      "relation_id": 6699087,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2470.1
+    },
+    {
+      "relation_id": 6699100,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1258.8
+    },
+    {
+      "relation_id": 6699101,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1258.8
+    },
+    {
+      "relation_id": 6837200,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 321.7
+    },
+    {
+      "relation_id": 6984614,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 305.8
+    },
+    {
+      "relation_id": 7210908,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1570.8
+    },
+    {
+      "relation_id": 8205938,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1141.8
+    },
+    {
+      "relation_id": 8267097,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 964.7
+    },
+    {
+      "relation_id": 9375949,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 287.7
+    },
+    {
+      "relation_id": 9375951,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 289.2
+    },
+    {
+      "relation_id": 10314368,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 331.6
+    },
+    {
+      "relation_id": 10320673,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 396.1
+    },
+    {
+      "relation_id": 10320678,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 396.1
+    },
+    {
+      "relation_id": 10320717,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 700.7
+    },
+    {
+      "relation_id": 10320860,
+      "status": "ok",
+      "method": "from_plus_section_or_device",
+      "length_m": 407.9
+    },
+    {
+      "relation_id": 10320880,
+      "status": "ok",
+      "method": "section_or_device_plus_to",
+      "length_m": 400.5
+    },
+    {
+      "relation_id": 10320905,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 361.9
+    },
+    {
+      "relation_id": 10320907,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 363.4
+    },
+    {
+      "relation_id": 11193030,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4365.4
+    },
+    {
+      "relation_id": 12377938,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": [
+        [
+          49.1837745,
+          16.2797348
+        ],
+        [
+          49.1825434,
+          16.2884686
+        ]
+      ]
+    },
+    {
+      "relation_id": 12419066,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3422.3
+    },
+    {
+      "relation_id": 12419068,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 8206.8
+    },
+    {
+      "relation_id": 12539701,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 196.6
+    },
+    {
+      "relation_id": 12539702,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 360.3
+    },
+    {
+      "relation_id": 12540063,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 490.6
+    },
+    {
+      "relation_id": 12555165,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4512.7
+    },
+    {
+      "relation_id": 13120957,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 605.6
+    },
+    {
+      "relation_id": 13155018,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 639.0
+    },
+    {
+      "relation_id": 13155019,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 639.3
+    },
+    {
+      "relation_id": 13240174,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 767.5
+    },
+    {
+      "relation_id": 13240175,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 776.7
+    },
+    {
+      "relation_id": 13263932,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 701.4
+    },
+    {
+      "relation_id": 13485724,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1494.1
+    },
+    {
+      "relation_id": 13485725,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1494.1
+    },
+    {
+      "relation_id": 13485967,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3971.3
+    },
+    {
+      "relation_id": 13485968,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3976.4
+    },
+    {
+      "relation_id": 13486243,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3072.9
+    },
+    {
+      "relation_id": 13486244,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2944.6
+    },
+    {
+      "relation_id": 13489824,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4825.9
+    },
+    {
+      "relation_id": 13489825,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4825.9
+    },
+    {
+      "relation_id": 13492799,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 5484.3
+    },
+    {
+      "relation_id": 13492800,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 5484.3
+    },
+    {
+      "relation_id": 13542404,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1083.1
+    },
+    {
+      "relation_id": 13542405,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1083.1
+    },
+    {
+      "relation_id": 13542431,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 5800.7
+    },
+    {
+      "relation_id": 13542432,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 5800.7
+    },
+    {
+      "relation_id": 13542434,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 8413.4
+    },
+    {
+      "relation_id": 13542435,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 8413.4
+    },
+    {
+      "relation_id": 13542536,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 12878.2
+    },
+    {
+      "relation_id": 13542537,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 12878.2
+    },
+    {
+      "relation_id": 13568002,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4512.7
+    },
+    {
+      "relation_id": 13568041,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2565.7
+    },
+    {
+      "relation_id": 13568042,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2565.7
+    },
+    {
+      "relation_id": 13568184,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2752.7
+    },
+    {
+      "relation_id": 13568185,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2752.7
+    },
+    {
+      "relation_id": 13568187,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4045.9
+    },
+    {
+      "relation_id": 13568188,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4045.9
+    },
+    {
+      "relation_id": 13568189,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2630.4
+    },
+    {
+      "relation_id": 13568190,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2630.4
+    },
+    {
+      "relation_id": 13580488,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 5993.2
+    },
+    {
+      "relation_id": 13580489,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 5993.2
+    },
+    {
+      "relation_id": 13580494,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 5711.3
+    },
+    {
+      "relation_id": 13580495,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 5711.3
+    },
+    {
+      "relation_id": 13580502,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 11555.8
+    },
+    {
+      "relation_id": 13580503,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 11555.8
+    },
+    {
+      "relation_id": 13580513,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 13337.1
+    },
+    {
+      "relation_id": 13580514,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 13337.1
+    },
+    {
+      "relation_id": 13580584,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4365.4
+    },
+    {
+      "relation_id": 13580597,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 10763.7
+    },
+    {
+      "relation_id": 13580598,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 10763.7
+    },
+    {
+      "relation_id": 13580614,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7851.5
+    },
+    {
+      "relation_id": 13580615,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7851.5
+    },
+    {
+      "relation_id": 13580618,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 17011.1
+    },
+    {
+      "relation_id": 13580619,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 17011.1
+    },
+    {
+      "relation_id": 13580665,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6415.7
+    },
+    {
+      "relation_id": 13580666,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6415.7
+    },
+    {
+      "relation_id": 13580701,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3422.3
+    },
+    {
+      "relation_id": 13630899,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6339.0
+    },
+    {
+      "relation_id": 13630900,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6339.0
+    },
+    {
+      "relation_id": 13631706,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2500.9
+    },
+    {
+      "relation_id": 13631707,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2449.9
+    },
+    {
+      "relation_id": 13646371,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 719.4
+    },
+    {
+      "relation_id": 13646372,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 718.1
+    },
+    {
+      "relation_id": 13650955,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 451.7
+    },
+    {
+      "relation_id": 13650960,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 381.3
+    },
+    {
+      "relation_id": 13650961,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 315.4
+    },
+    {
+      "relation_id": 13651259,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 371.6
+    },
+    {
+      "relation_id": 13652438,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 580.6
+    },
+    {
+      "relation_id": 13652439,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 631.9
+    },
+    {
+      "relation_id": 13652555,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 440.2
+    },
+    {
+      "relation_id": 13652556,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 439.3
+    },
+    {
+      "relation_id": 13652557,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 454.3
+    },
+    {
+      "relation_id": 13652558,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 696.1
+    },
+    {
+      "relation_id": 13755923,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1158.6
+    },
+    {
+      "relation_id": 13755924,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 966.8
+    },
+    {
+      "relation_id": 13755937,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1106.8
+    },
+    {
+      "relation_id": 13755938,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 771.7
+    },
+    {
+      "relation_id": 13852189,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": [
+        [
+          52.3350583,
+          23.9113912
+        ],
+        [
+          52.3110166,
+          23.9217272
+        ]
+      ]
+    },
+    {
+      "relation_id": 14228458,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [
+        [
+          53.7290441,
+          24.1599501
+        ],
+        [
+          53.7311032,
+          24.1429902
+        ]
+      ],
+      "section_endpoints": [
+        [
+          53.7289793,
+          24.1607967
+        ],
+        [
+          53.7310126,
+          24.1398755
+        ]
+      ]
+    },
+    {
+      "relation_id": 14374891,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3807.6
+    },
+    {
+      "relation_id": 14374899,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3807.6
+    },
+    {
+      "relation_id": 14889484,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2036.7
+    },
+    {
+      "relation_id": 14889485,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2041.7
+    },
+    {
+      "relation_id": 14891229,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 390.6
+    },
+    {
+      "relation_id": 14896413,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 571.2
+    },
+    {
+      "relation_id": 14930222,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 329.4
+    },
+    {
+      "relation_id": 14930225,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 330.7
+    },
+    {
+      "relation_id": 14938149,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 327.0
+    },
+    {
+      "relation_id": 14954456,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3029.5
+    },
+    {
+      "relation_id": 14954457,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3035.9
+    },
+    {
+      "relation_id": 15005993,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 523.8
+    },
+    {
+      "relation_id": 15515310,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 233.8
+    },
+    {
+      "relation_id": 15515311,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 233.8
+    },
+    {
+      "relation_id": 15636492,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 272.9
+    },
+    {
+      "relation_id": 16052604,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2133.7
+    },
+    {
+      "relation_id": 16052605,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2133.7
+    },
+    {
+      "relation_id": 16282671,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [
+        [
+          54.3771654,
+          24.069643
+        ],
+        [
+          54.3658537,
+          24.1115792
+        ]
+      ],
+      "section_endpoints": [
+        [
+          54.3773841,
+          24.0688325
+        ],
+        [
+          54.3658113,
+          24.111976
+        ]
+      ]
+    },
+    {
+      "relation_id": 16282672,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [
+        [
+          54.3658537,
+          24.1115792
+        ],
+        [
+          54.3771654,
+          24.069643
+        ]
+      ],
+      "section_endpoints": [
+        [
+          54.3658113,
+          24.111976
+        ],
+        [
+          54.3773841,
+          24.0688325
+        ]
+      ]
+    },
+    {
+      "relation_id": 16282825,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6292.8
+    },
+    {
+      "relation_id": 16282826,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6292.8
+    },
+    {
+      "relation_id": 16284289,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2180.8
+    },
+    {
+      "relation_id": 16284290,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2258.6
+    },
+    {
+      "relation_id": 16284291,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7842.3
+    },
+    {
+      "relation_id": 16284292,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7915.4
+    },
+    {
+      "relation_id": 16312228,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7956.5
+    },
+    {
+      "relation_id": 16312241,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7950.8
+    },
+    {
+      "relation_id": 16495692,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 443.3
+    },
+    {
+      "relation_id": 16495693,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 447.2
+    },
+    {
+      "relation_id": 16608907,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 8206.8
+    },
+    {
+      "relation_id": 16752177,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 314.5
+    },
+    {
+      "relation_id": 16752178,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 312.5
+    },
+    {
+      "relation_id": 16821745,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 445.3
+    },
+    {
+      "relation_id": 16821746,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 441.9
+    },
+    {
+      "relation_id": 16897864,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 695.0
+    },
+    {
+      "relation_id": 16897865,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 686.4
+    },
+    {
+      "relation_id": 16897970,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 720.5
+    },
+    {
+      "relation_id": 16897971,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 718.5
+    },
+    {
+      "relation_id": 16898122,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 877.4
+    },
+    {
+      "relation_id": 16898123,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 879.7
+    },
+    {
+      "relation_id": 17023950,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7394.5
+    },
+    {
+      "relation_id": 17038113,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1545.3
+    },
+    {
+      "relation_id": 17038114,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1545.3
+    },
+    {
+      "relation_id": 17052055,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2126.8
+    },
+    {
+      "relation_id": 17052056,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2126.8
+    },
+    {
+      "relation_id": 17057249,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7398.7
+    },
+    {
+      "relation_id": 17137672,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 669.1
+    },
+    {
+      "relation_id": 17137673,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 663.5
+    },
+    {
+      "relation_id": 17173556,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3088.2
+    },
+    {
+      "relation_id": 17173560,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2890.3
+    },
+    {
+      "relation_id": 17226075,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 13408.9
+    },
+    {
+      "relation_id": 17226076,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 13411.2
+    },
+    {
+      "relation_id": 17239466,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 11717.4
+    },
+    {
+      "relation_id": 17239467,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 11722.2
+    },
+    {
+      "relation_id": 17310141,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2892.3
+    },
+    {
+      "relation_id": 17310142,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2892.3
+    },
+    {
+      "relation_id": 17319360,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7100.8
+    },
+    {
+      "relation_id": 17319361,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7100.0
+    },
+    {
+      "relation_id": 17449804,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7728.3
+    },
+    {
+      "relation_id": 17449805,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7728.3
+    },
+    {
+      "relation_id": 17467658,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3123.5
+    },
+    {
+      "relation_id": 17467659,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3123.5
+    },
+    {
+      "relation_id": 17488185,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1800.1
+    },
+    {
+      "relation_id": 17488186,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1800.1
+    },
+    {
+      "relation_id": 17541244,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 13848.8
+    },
+    {
+      "relation_id": 17541245,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 13859.7
+    },
+    {
+      "relation_id": 17541931,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2330.2
+    },
+    {
+      "relation_id": 17541933,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2330.2
+    },
+    {
+      "relation_id": 17542027,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1301.1
+    },
+    {
+      "relation_id": 17542028,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1301.1
+    },
+    {
+      "relation_id": 17549837,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 10840.8
+    },
+    {
+      "relation_id": 17549838,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 10834.2
+    },
+    {
+      "relation_id": 17642181,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 384.0
+    },
+    {
+      "relation_id": 17642182,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 397.2
+    },
+    {
+      "relation_id": 17714528,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1678.3
+    },
+    {
+      "relation_id": 17714529,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1678.3
+    },
+    {
+      "relation_id": 17728802,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 254.2
+    },
+    {
+      "relation_id": 17728803,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 775.9
+    },
+    {
+      "relation_id": 17728890,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4345.4
+    },
+    {
+      "relation_id": 17735027,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1693.0
+    },
+    {
+      "relation_id": 17759541,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1693.0
+    },
+    {
+      "relation_id": 17766639,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1370.5
+    },
+    {
+      "relation_id": 17766640,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1370.5
+    },
+    {
+      "relation_id": 17766641,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2760.7
+    },
+    {
+      "relation_id": 17766642,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2760.7
+    },
+    {
+      "relation_id": 17792947,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3722.4
+    },
+    {
+      "relation_id": 17792948,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3722.4
+    },
+    {
+      "relation_id": 17792949,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2641.6
+    },
+    {
+      "relation_id": 17792950,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2641.6
+    },
+    {
+      "relation_id": 17799367,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 217.2
+    },
+    {
+      "relation_id": 17799368,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 216.7
+    },
+    {
+      "relation_id": 17805650,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4345.4
+    },
+    {
+      "relation_id": 17833149,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 103.1
+    },
+    {
+      "relation_id": 17833150,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 108.0
+    },
+    {
+      "relation_id": 17879836,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1264.5
+    },
+    {
+      "relation_id": 17879837,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1268.3
+    },
+    {
+      "relation_id": 17895210,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2352.6
+    },
+    {
+      "relation_id": 17895211,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2474.1
+    },
+    {
+      "relation_id": 17916670,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7207.5
+    },
+    {
+      "relation_id": 17916671,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7207.5
+    },
+    {
+      "relation_id": 17917608,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4019.6
+    },
+    {
+      "relation_id": 17917609,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4019.6
+    },
+    {
+      "relation_id": 17922977,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2258.2
+    },
+    {
+      "relation_id": 17922978,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2251.7
+    },
+    {
+      "relation_id": 17933481,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6061.1
+    },
+    {
+      "relation_id": 17933482,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6075.1
+    },
+    {
+      "relation_id": 18008233,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2007.5
+    },
+    {
+      "relation_id": 18008234,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2008.7
+    },
+    {
+      "relation_id": 18045425,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18063932,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 8298.6
+    },
+    {
+      "relation_id": 18063935,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 8298.6
+    },
+    {
+      "relation_id": 18102155,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2540.5
+    },
+    {
+      "relation_id": 18102156,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2541.8
+    },
+    {
+      "relation_id": 18163754,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1316.4
+    },
+    {
+      "relation_id": 18163755,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1316.4
+    },
+    {
+      "relation_id": 18176700,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 352.1
+    },
+    {
+      "relation_id": 18176701,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 353.2
+    },
+    {
+      "relation_id": 18204779,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 552.5
+    },
+    {
+      "relation_id": 18226863,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3859.6
+    },
+    {
+      "relation_id": 18226864,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3859.6
+    },
+    {
+      "relation_id": 18233973,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1833.9
+    },
+    {
+      "relation_id": 18233974,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1833.9
+    },
+    {
+      "relation_id": 18284189,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 961.2
+    },
+    {
+      "relation_id": 18284190,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 980.7
+    },
+    {
+      "relation_id": 18284191,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 571.1
+    },
+    {
+      "relation_id": 18284192,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 722.9
+    },
+    {
+      "relation_id": 18284193,
+      "status": "ok",
+      "method": "from_plus_section_or_device",
+      "length_m": 2319.6
+    },
+    {
+      "relation_id": 18284194,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2281.3
+    },
+    {
+      "relation_id": 18318341,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1327.6
+    },
+    {
+      "relation_id": 18318342,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1327.6
+    },
+    {
+      "relation_id": 18330355,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [
+        [
+          54.9270485,
+          23.6552403
+        ],
+        [
+          54.9259802,
+          23.6681068
+        ]
+      ],
+      "section_endpoints": [
+        [
+          54.9270485,
+          23.6552403
+        ],
+        [
+          54.9259802,
+          23.6681068
+        ]
+      ]
+    },
+    {
+      "relation_id": 18330478,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [
+        [
+          54.9456607,
+          23.2015605
+        ],
+        [
+          54.9613311,
+          23.3354247
+        ]
+      ],
+      "section_endpoints": [
+        [
+          54.9456607,
+          23.2015605
+        ],
+        [
+          54.9613847,
+          23.3353987
+        ]
+      ]
+    },
+    {
+      "relation_id": 18368947,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2854.5
+    },
+    {
+      "relation_id": 18368948,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2854.5
+    },
+    {
+      "relation_id": 18421983,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2469.4
+    },
+    {
+      "relation_id": 18421984,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2469.4
+    },
+    {
+      "relation_id": 18447619,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 207.4
+    },
+    {
+      "relation_id": 18447620,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 207.1
+    },
+    {
+      "relation_id": 18514345,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [
+        [
+          49.7463706,
+          14.7939917
+        ],
+        [
+          49.7448182,
+          14.7972824
+        ]
+      ],
+      "section_endpoints": [
+        [
+          49.7463706,
+          14.7939917
+        ],
+        [
+          49.7448182,
+          14.7972824
+        ]
+      ]
+    },
+    {
+      "relation_id": 18527904,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3870.8
+    },
+    {
+      "relation_id": 18527905,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3870.8
+    },
+    {
+      "relation_id": 18638357,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18638773,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18639413,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18639414,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18639415,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18641725,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18641726,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18641727,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18641728,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18657582,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 5089.2
+    },
+    {
+      "relation_id": 18657583,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 5089.2
+    },
+    {
+      "relation_id": 18673428,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18673429,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18673430,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18706186,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18714269,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [
+        [
+          49.1683295,
+          16.8404056
+        ]
+      ],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18714270,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 490.8
+    },
+    {
+      "relation_id": 18714290,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1562.1
+    },
+    {
+      "relation_id": 18741370,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 18822663,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 418.2
+    },
+    {
+      "relation_id": 18822664,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 418.2
+    },
+    {
+      "relation_id": 18845826,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 496.7
+    },
+    {
+      "relation_id": 18889127,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2690.7
+    },
+    {
+      "relation_id": 18889128,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2690.7
+    },
+    {
+      "relation_id": 18932146,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4989.1
+    },
+    {
+      "relation_id": 18932147,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 5011.8
+    },
+    {
+      "relation_id": 19047842,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 248.4
+    },
+    {
+      "relation_id": 19047843,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 246.4
+    },
+    {
+      "relation_id": 19047844,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 217.8
+    },
+    {
+      "relation_id": 19047845,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 218.3
+    },
+    {
+      "relation_id": 19066734,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 882.0
+    },
+    {
+      "relation_id": 19066735,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 880.5
+    },
+    {
+      "relation_id": 19338543,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 862.0
+    },
+    {
+      "relation_id": 19338544,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 862.2
+    },
+    {
+      "relation_id": 19423803,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 19600719,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7370.7
+    },
+    {
+      "relation_id": 19600720,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7372.6
+    },
+    {
+      "relation_id": 19737045,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 19737046,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 19737047,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 19737048,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 19737077,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 19767030,
+      "status": "skipped",
+      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
+      "from_points": [],
+      "to_points": [],
+      "device_points": [],
+      "section_endpoints": []
+    },
+    {
+      "relation_id": 19820867,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 5503.2
+    },
+    {
+      "relation_id": 19820868,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 5518.2
+    },
+    {
+      "relation_id": 19824101,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3426.9
+    },
+    {
+      "relation_id": 19824102,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3426.9
+    },
+    {
+      "relation_id": 19847185,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1155.9
+    },
+    {
+      "relation_id": 19888425,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7396.8
+    },
+    {
+      "relation_id": 19888426,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7425.6
+    },
+    {
+      "relation_id": 19930807,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 127.8
+    },
+    {
+      "relation_id": 19930808,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 125.7
+    },
+    {
+      "relation_id": 19931382,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 9834.2
+    },
+    {
+      "relation_id": 19931383,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 9840.2
+    },
+    {
+      "relation_id": 19953987,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2339.8
+    },
+    {
+      "relation_id": 19953988,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2354.1
+    },
+    {
+      "relation_id": 19980920,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 12709.4
+    },
+    {
+      "relation_id": 19980921,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 12709.4
+    },
+    {
+      "relation_id": 19996813,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 13443.3
+    },
+    {
+      "relation_id": 19996814,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 13443.1
+    },
+    {
+      "relation_id": 20040438,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7270.1
+    },
+    {
+      "relation_id": 20040439,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7278.1
+    },
+    {
+      "relation_id": 20044670,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 700.7
+    },
+    {
+      "relation_id": 20044698,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1353.5
+    },
+    {
+      "relation_id": 20044699,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1353.5
+    },
+    {
+      "relation_id": 20056511,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2248.7
+    },
+    {
+      "relation_id": 20056512,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2249.7
+    },
+    {
+      "relation_id": 20063908,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1216.1
+    },
+    {
+      "relation_id": 20063909,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1156.3
+    },
+    {
+      "relation_id": 20137713,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 471.9
+    },
+    {
+      "relation_id": 20137714,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 471.9
+    },
+    {
+      "relation_id": 20152587,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 16859.5
+    },
+    {
+      "relation_id": 20152588,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 16849.9
+    },
+    {
+      "relation_id": 20152811,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2961.4
+    },
+    {
+      "relation_id": 20152812,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2963.8
+    },
+    {
+      "relation_id": 20219681,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4128.1
+    },
+    {
+      "relation_id": 20219682,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4139.3
+    },
+    {
+      "relation_id": 20227779,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3045.5
+    },
+    {
+      "relation_id": 20227780,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3046.8
+    },
+    {
+      "relation_id": 20228060,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4024.1
+    },
+    {
+      "relation_id": 20228061,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 4025.9
+    },
+    {
+      "relation_id": 20235495,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 15109.4
+    },
+    {
+      "relation_id": 20235496,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 15101.9
+    },
+    {
+      "relation_id": 20250729,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6308.3
+    },
+    {
+      "relation_id": 20250730,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6315.7
+    },
+    {
+      "relation_id": 20293533,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 12149.2
+    },
+    {
+      "relation_id": 20293534,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 12146.7
+    },
+    {
+      "relation_id": 20348715,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3223.7
+    },
+    {
+      "relation_id": 20348716,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3224.1
+    },
+    {
+      "relation_id": 20351870,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 13154.0
+    },
+    {
+      "relation_id": 20351871,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 13165.3
+    },
+    {
+      "relation_id": 20404647,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7517.5
+    },
+    {
+      "relation_id": 20404648,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 7513.2
+    },
+    {
+      "relation_id": 20405932,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 10219.4
+    },
+    {
+      "relation_id": 20405933,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 10219.9
+    },
+    {
+      "relation_id": 20406172,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 10050.9
+    },
+    {
+      "relation_id": 20406173,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 10050.3
+    },
+    {
+      "relation_id": 20407289,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6609.6
+    },
+    {
+      "relation_id": 20407290,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6618.5
+    },
+    {
+      "relation_id": 20627104,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 11114.1
+    },
+    {
+      "relation_id": 20627105,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 11123.7
+    },
+    {
+      "relation_id": 20631510,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 14278.9
+    },
+    {
+      "relation_id": 20631620,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 14277.8
+    },
+    {
+      "relation_id": 20722768,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 15540.6
+    },
+    {
+      "relation_id": 20722769,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 15552.8
+    },
+    {
+      "relation_id": 20722799,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2611.3
+    },
+    {
+      "relation_id": 20722800,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2611.3
+    },
+    {
+      "relation_id": 20775573,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3214.9
+    },
+    {
+      "relation_id": 20775574,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3205.9
+    },
+    {
+      "relation_id": 20775915,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 9284.3
+    },
+    {
+      "relation_id": 20775916,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 9287.7
+    },
+    {
+      "relation_id": 20801170,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2811.2
+    },
+    {
+      "relation_id": 20801171,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2828.1
+    },
+    {
+      "relation_id": 20956942,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 10163.7
+    },
+    {
+      "relation_id": 20956943,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 10171.8
+    },
+    {
+      "relation_id": 20967015,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 12618.3
+    },
+    {
+      "relation_id": 20967016,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 13391.1
+    },
+    {
+      "relation_id": 20972329,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3890.4
+    },
+    {
+      "relation_id": 20972356,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3884.6
+    },
+    {
+      "relation_id": 20977000,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 851.2
+    },
+    {
+      "relation_id": 20977001,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 851.2
+    },
+    {
+      "relation_id": 21004527,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3614.2
+    },
+    {
+      "relation_id": 21004528,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3606.0
+    },
+    {
+      "relation_id": 21028231,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 19083.5
+    },
+    {
+      "relation_id": 21028232,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 19088.2
+    },
+    {
+      "relation_id": 21028505,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6781.2
+    },
+    {
+      "relation_id": 21028506,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 6804.9
+    },
+    {
+      "relation_id": 21049779,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 17436.3
+    },
+    {
+      "relation_id": 21049780,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 17447.2
+    },
+    {
+      "relation_id": 21052972,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3681.2
+    },
+    {
+      "relation_id": 21052973,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 3702.1
+    },
+    {
+      "relation_id": 21071489,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 8899.8
+    },
+    {
+      "relation_id": 21071490,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 8910.8
+    },
+    {
+      "relation_id": 21071491,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 18661.2
+    },
+    {
+      "relation_id": 21071492,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 19037.3
+    },
+    {
+      "relation_id": 21071493,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 9864.9
+    },
+    {
+      "relation_id": 21071494,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 9865.2
+    },
+    {
+      "relation_id": 21071595,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2439.8
+    },
+    {
+      "relation_id": 21071596,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 2445.2
+    },
+    {
+      "relation_id": 21071614,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 10395.6
+    },
+    {
+      "relation_id": 21071615,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 10391.8
+    }
+  ]
+}
