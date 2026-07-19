@@ -11,14 +11,14 @@ permissions:
   pages: write
   id-token: write
 
-environment:
-  name: github-pages
-  url: ${{ steps.deployment.outputs.page_url }}
-
 jobs:
   update-speed-cameras:
     runs-on: ubuntu-latest
     timeout-minutes: 40
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout repository
