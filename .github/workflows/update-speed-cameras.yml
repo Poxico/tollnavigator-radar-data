@@ -1,0 +1,85 @@
+name: Update TollNavigator speed cameras
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Co 3 dni około 02:17 UTC. GitHub może uruchomić workflow z niewielkim opóźnieniem.
+    - cron: '17 2 */3 * *'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+environment:
+  name: github-pages
+  url: ${{ steps.deployment.outputs.page_url }}
+
+jobs:
+  update-speed-cameras:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade requests
+
+      - name: Preserve previous database for safety checks
+        run: |
+          mkdir -p tmp
+          if [ -f public/tollnavigator/speed_cameras.json ]; then
+            cp public/tollnavigator/speed_cameras.json tmp/speed_cameras_previous.json
+          fi
+
+      - name: Generate speed camera database from OSM
+        run: |
+          python scripts/generate_speed_cameras_osm_v3.py \
+            --output public/tollnavigator/speed_cameras.json \
+            --report public/tollnavigator/speed_cameras_report.json
+
+      - name: Validate database and generate metadata
+        run: |
+          PREVIOUS_ARG=""
+          if [ -f tmp/speed_cameras_previous.json ]; then
+            PREVIOUS_ARG="--previous tmp/speed_cameras_previous.json"
+          fi
+          python scripts/validate_and_meta.py \
+            --db public/tollnavigator/speed_cameras.json \
+            --report public/tollnavigator/speed_cameras_report.json \
+            $PREVIOUS_ARG \
+            --out public/tollnavigator/speed_cameras_meta.json
+
+      - name: Commit generated files to repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/tollnavigator/speed_cameras.json \
+                  public/tollnavigator/speed_cameras_meta.json \
+                  public/tollnavigator/speed_cameras_report.json \
+                  public/.nojekyll
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update TollNavigator speed camera database"
+            git push
+          fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
