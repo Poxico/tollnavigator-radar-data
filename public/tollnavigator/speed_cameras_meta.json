@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-19",
-  "generated": "2026-07-19T11:57:27.995937+00:00",
+  "version": "2026-07-22",
+  "generated": "2026-07-22T05:29:42.169048+00:00",
   "source": "OpenStreetMap contributors, ODbL",
   "count": 2708,
   "count_fixed": 1926,
@@ -10,6 +10,6 @@
   "average_relations_ok": 391,
   "average_relations_skipped": 31,
   "fixed_duplicates_removed": 186,
-  "sha256": "7487a8e5729340dc03c975ca5df25307379f8f0f28285860faaa2c14e2d53385",
-  "meta_generated": "2026-07-19T11:57:28.093950+00:00"
+  "sha256": "8e0396654b3cfe10cf9403ed42ffebd9e4b6f50376440e616ab214c69bdc5983",
+  "meta_generated": "2026-07-22T05:29:42.267930+00:00"
 }
