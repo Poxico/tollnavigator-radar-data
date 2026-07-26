@@ -3,8 +3,8 @@ name: Update TollNavigator speed cameras
 on:
   workflow_dispatch:
   schedule:
-    # Co 3 dni około 02:17 UTC. GitHub może uruchomić workflow z niewielkim opóźnieniem.
-    - cron: '17 2 */3 * *'
+    # Raz w tygodniu około 02:17 UTC. GitHub może uruchomić workflow z niewielkim opóźnieniem.
+    - cron: '17 2 * * 6'
 
 permissions:
   contents: write
