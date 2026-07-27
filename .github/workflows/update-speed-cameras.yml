@@ -32,18 +32,34 @@ jobs:
       - name: Install Python dependencies
         run: python -m pip install --upgrade requests
 
-      - name: Preserve previous database for safety checks
+      - name: Prepare output directories
         run: |
-          mkdir -p tmp
+          mkdir -p tmp public/tollnavigator
+          touch public/.nojekyll
+
+      - name: Preserve previous safe database
+        run: |
           if [ -f public/tollnavigator/speed_cameras.json ]; then
             cp public/tollnavigator/speed_cameras.json tmp/speed_cameras_previous.json
+            echo "Previous database preserved."
+          else
+            echo "No previous database found. First run will use fresh OSM database only."
           fi
 
-      - name: Generate speed camera database from OSM
+      - name: Generate fresh speed camera database from OSM
         run: |
           python scripts/generate_speed_cameras_osm_v3.py \
-            --output public/tollnavigator/speed_cameras.json \
+            --output tmp/speed_cameras_fresh.json \
             --report public/tollnavigator/speed_cameras_report.json
+
+      - name: Merge with previous safe database
+        run: |
+          python scripts/merge_speed_cameras.py \
+            --new tmp/speed_cameras_fresh.json \
+            --previous tmp/speed_cameras_previous.json \
+            --out public/tollnavigator/speed_cameras.json \
+            --report public/tollnavigator/speed_cameras_merge_report.json \
+            --manual-remove scripts/manual_removed_speed_cameras.json
 
       - name: Validate database and generate metadata
         run: |
@@ -51,9 +67,11 @@ jobs:
           if [ -f tmp/speed_cameras_previous.json ]; then
             PREVIOUS_ARG="--previous tmp/speed_cameras_previous.json"
           fi
+
           python scripts/validate_and_meta.py \
             --db public/tollnavigator/speed_cameras.json \
             --report public/tollnavigator/speed_cameras_report.json \
+            --merge-report public/tollnavigator/speed_cameras_merge_report.json \
             $PREVIOUS_ARG \
             --out public/tollnavigator/speed_cameras_meta.json
 
@@ -61,10 +79,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add public/tollnavigator/speed_cameras.json \
                   public/tollnavigator/speed_cameras_meta.json \
                   public/tollnavigator/speed_cameras_report.json \
+                  public/tollnavigator/speed_cameras_merge_report.json \
                   public/.nojekyll
+
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
