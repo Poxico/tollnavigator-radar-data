@@ -7,7 +7,7 @@ on:
       - '.github/workflows/update-rest-areas.yml'
       - 'scripts/should_update_rest_areas.py'
       - 'manual_removed_rest_areas.json'
-      - 'data/rest_areas_updater_bundle.part*'
+      - 'data/rest_areas_bundle_chunk_*'
   schedule:
     # Workflow sprawdza bazę co tydzień, lecz pełne odświeżenie wykonuje co około 14 dni.
     - cron: '17 4 * * 1'
@@ -43,10 +43,20 @@ jobs:
       - name: Install Python dependencies
         run: python -m pip install --upgrade requests
 
-      - name: Restore updater tools and safe baseline
+      - name: Restore verified updater tools and safe baseline
         run: |
+          set -euo pipefail
           mkdir -p tmp/updater public/tollnavigator
-          cat data/rest_areas_updater_bundle.part* | base64 --decode > tmp/rest_areas_updater.zip
+
+          CHUNK_COUNT=$(find data -maxdepth 1 -type f -name 'rest_areas_bundle_chunk_*' | wc -l)
+          if [ "$CHUNK_COUNT" -ne 15 ]; then
+            echo "Expected 15 MOP updater chunks, found $CHUNK_COUNT."
+            exit 1
+          fi
+
+          cat data/rest_areas_bundle_chunk_* | base64 --decode > tmp/rest_areas_updater.zip
+          echo 'ceace4c1a3bee71da284acdbd813de85390b11a02aa285ab0576751a68d7b759  tmp/rest_areas_updater.zip' | sha256sum -c -
+          unzip -tq tmp/rest_areas_updater.zip
           unzip -q tmp/rest_areas_updater.zip -d tmp/updater
           touch public/.nojekyll
 
