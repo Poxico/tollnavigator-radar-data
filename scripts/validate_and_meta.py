@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Any
 
 MIN_VALID_CAMERA_COUNT = 1000
-MAX_COUNT_DROP_RATIO = 0.35  # jeśli nowa baza ma spadek >35% względem poprzedniej, przerywamy
+MAX_COUNT_DROP_RATIO = 0.35  # awaryjna blokada dużego spadku całości
 
 
 def sha256_file(path: Path) -> str:
@@ -31,6 +31,41 @@ def load_json(path: Path) -> dict[str, Any]:
 def fail(message: str) -> None:
     print(f"BŁĄD WALIDACJI: {message}", file=sys.stderr)
     sys.exit(1)
+
+
+def is_average(cam: dict[str, Any]) -> bool:
+    return bool(cam.get("isAverage", False))
+
+
+def complete_opp_pair_ids(cameras: list[dict[str, Any]]) -> set[str]:
+    starts_by_pair: dict[str, int] = {}
+    ends_by_pair: dict[str, int] = {}
+
+    for cam in cameras:
+        if not is_average(cam):
+            continue
+        pair_id = cam.get("oppPairId")
+        if not pair_id:
+            continue
+        pair_id = str(pair_id)
+        if cam.get("isStart", True):
+            starts_by_pair[pair_id] = starts_by_pair.get(pair_id, 0) + 1
+        else:
+            ends_by_pair[pair_id] = ends_by_pair.get(pair_id, 0) + 1
+
+    return {
+        pair_id
+        for pair_id in starts_by_pair.keys() & ends_by_pair.keys()
+        if starts_by_pair[pair_id] == 1 and ends_by_pair[pair_id] == 1
+    }
+
+
+def fixed_ids(cameras: list[dict[str, Any]]) -> set[str]:
+    return {
+        str(cam.get("id"))
+        for cam in cameras
+        if isinstance(cam, dict) and not is_average(cam) and cam.get("id")
+    }
 
 
 def validate_database(db_path: Path, previous_path: Path | None = None) -> dict[str, Any]:
@@ -83,6 +118,7 @@ def validate_database(db_path: Path, previous_path: Path | None = None) -> dict[
             pair_id = cam.get("oppPairId")
             if not pair_id:
                 fail(f"punkt OPP {cid} nie ma oppPairId")
+            pair_id = str(pair_id)
             if cam.get("isStart", True):
                 starts_by_pair[pair_id] = starts_by_pair.get(pair_id, 0) + 1
             else:
@@ -97,18 +133,35 @@ def validate_database(db_path: Path, previous_path: Path | None = None) -> dict[
     if bad_pairs:
         fail(f"błędne liczności par OPP, przykłady: {bad_pairs[:5]}")
 
+    previous_summary: dict[str, Any] = {}
     if previous_path and previous_path.exists():
         try:
             previous = load_json(previous_path)
-            prev_count = len(previous.get("cameras", []))
-            if prev_count >= MIN_VALID_CAMERA_COUNT:
-                drop_ratio = (prev_count - count) / prev_count
-                if drop_ratio > MAX_COUNT_DROP_RATIO:
-                    fail(f"podejrzany spadek liczby radarów: poprzednio={prev_count}, teraz={count}")
+            prev_cameras = previous.get("cameras", [])
+            if isinstance(prev_cameras, list):
+                prev_count = len(prev_cameras)
+                if prev_count >= MIN_VALID_CAMERA_COUNT:
+                    drop_ratio = (prev_count - count) / prev_count
+                    if drop_ratio > MAX_COUNT_DROP_RATIO:
+                        fail(f"podejrzany spadek liczby radarów: poprzednio={prev_count}, teraz={count}")
+
+                prev_fixed = fixed_ids([c for c in prev_cameras if isinstance(c, dict)])
+                curr_fixed = fixed_ids([c for c in cameras if isinstance(c, dict)])
+                prev_opp = complete_opp_pair_ids([c for c in prev_cameras if isinstance(c, dict)])
+                curr_opp = complete_opp_pair_ids([c for c in cameras if isinstance(c, dict)])
+
+                previous_summary = {
+                    "previous_count": prev_count,
+                    "previous_fixed": len(prev_fixed),
+                    "previous_average": sum(1 for c in prev_cameras if isinstance(c, dict) and is_average(c)),
+                    "previous_average_pairs": len(prev_opp),
+                    "missing_fixed_vs_previous_after_merge": len(prev_fixed - curr_fixed),
+                    "missing_opp_pairs_vs_previous_after_merge": len(prev_opp - curr_opp),
+                }
         except Exception as exc:
             print(f"OSTRZEŻENIE: nie można porównać z poprzednią bazą: {exc}")
 
-    return {
+    meta = {
         "version": str(root.get("version") or dt.datetime.now(dt.timezone.utc).date().isoformat()),
         "generated": str(root.get("generated") or dt.datetime.now(dt.timezone.utc).isoformat()),
         "source": str(root.get("source") or "OpenStreetMap contributors, ODbL"),
@@ -117,12 +170,15 @@ def validate_database(db_path: Path, previous_path: Path | None = None) -> dict[
         "count_average": count_average,
         "average_pairs": count_average // 2,
     }
+    meta.update(previous_summary)
+    return meta
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Walidacja bazy radarów i tworzenie speed_cameras_meta.json")
-    parser.add_argument("--db", required=True, help="Ścieżka do speed_cameras.json")
-    parser.add_argument("--report", required=False, help="Ścieżka do speed_cameras_report.json")
+    parser.add_argument("--db", required=True, help="Ścieżka do finalnego speed_cameras.json")
+    parser.add_argument("--report", required=False, help="Ścieżka do speed_cameras_report.json z generatora")
+    parser.add_argument("--merge-report", required=False, help="Ścieżka do speed_cameras_merge_report.json ze scalania")
     parser.add_argument("--previous", required=False, help="Opcjonalna poprzednia baza do porównania")
     parser.add_argument("--out", required=True, help="Ścieżka wyjściowa speed_cameras_meta.json")
     args = parser.parse_args()
@@ -138,6 +194,13 @@ def main() -> int:
         meta["average_relations_skipped"] = report.get("average_relations_skipped")
         meta["fixed_duplicates_removed"] = report.get("fixed_duplicates_removed")
 
+    if args.merge_report and Path(args.merge_report).exists():
+        merge_report = load_json(Path(args.merge_report))
+        meta["merge_preserved_fixed"] = merge_report.get("preserved_fixed")
+        meta["merge_preserved_opp_pairs"] = merge_report.get("preserved_opp_pairs")
+        meta["merge_missing_fixed_from_fresh"] = merge_report.get("missing_fixed_from_fresh")
+        meta["merge_missing_opp_pairs_from_fresh"] = merge_report.get("missing_opp_pairs_from_fresh")
+
     meta["sha256"] = sha256_file(db_path)
     meta["meta_generated"] = dt.datetime.now(dt.timezone.utc).isoformat()
 
@@ -147,6 +210,8 @@ def main() -> int:
 
     print("Walidacja OK")
     print(f"Radary: {meta['count']} | stacjonarne: {meta['count_fixed']} | OPP: {meta['count_average']} ({meta['average_pairs']} par)")
+    if "merge_preserved_fixed" in meta:
+        print(f"Zachowane ze starej bazy: fixed={meta['merge_preserved_fixed']}, OPP pary={meta['merge_preserved_opp_pairs']}")
     print(f"Meta: {out_path.resolve()}")
     return 0
 
