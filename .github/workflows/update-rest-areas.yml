@@ -6,7 +6,7 @@ on:
     paths:
       - '.github/workflows/update-rest-areas.yml'
       - 'scripts/should_update_rest_areas.py'
-      - 'scripts/fetch_rest_areas_payload.py'
+      - 'scripts/fetch_rest_areas_payload_tiled.py'
       - 'manual_removed_rest_areas.json'
       - 'data/rest_areas_bundle_chunk_*'
   schedule:
@@ -26,7 +26,7 @@ concurrency:
 jobs:
   update-rest-areas:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 25
 
     environment:
       name: github-pages
@@ -86,9 +86,8 @@ jobs:
         id: fetch
         if: steps.due.outputs.run == 'true'
         run: |
-          if python scripts/fetch_rest_areas_payload.py \
+          if python scripts/fetch_rest_areas_payload_tiled.py \
                 --output tmp/rest_areas_osm_payload.json \
-                --batch-size 16 \
              && python tmp/updater/scripts/fetch_rest_areas.py \
                 --input-osm tmp/rest_areas_osm_payload.json \
                 --output tmp/rest_areas_fresh.json; then
