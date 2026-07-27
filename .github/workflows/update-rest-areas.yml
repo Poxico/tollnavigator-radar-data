@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/update-rest-areas.yml'
       - 'scripts/should_update_rest_areas.py'
+      - 'scripts/fetch_rest_areas_payload.py'
       - 'manual_removed_rest_areas.json'
       - 'data/rest_areas_bundle_chunk_*'
   schedule:
@@ -85,12 +86,28 @@ jobs:
         id: fetch
         if: steps.due.outputs.run == 'true'
         run: |
-          if python tmp/updater/scripts/fetch_rest_areas.py --output tmp/rest_areas_fresh.json; then
+          if python scripts/fetch_rest_areas_payload.py \
+                --output tmp/rest_areas_osm_payload.json \
+                --batch-size 16 \
+             && python tmp/updater/scripts/fetch_rest_areas.py \
+                --input-osm tmp/rest_areas_osm_payload.json \
+                --output tmp/rest_areas_fresh.json; then
             echo 'ok=true' >> "$GITHUB_OUTPUT"
           else
             echo 'ok=false' >> "$GITHUB_OUTPUT"
             echo 'OSM download failed. Keeping the previous safe MOP database.'
           fi
+
+      - name: Upload OSM diagnostics
+        if: always() && steps.due.outputs.run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rest-areas-osm-diagnostics
+          path: |
+            tmp/rest_areas_osm_payload.json
+            tmp/rest_areas_fresh.json
+          if-no-files-found: ignore
+          retention-days: 7
 
       - name: Safely merge with previous database
         if: steps.due.outputs.run == 'true' && steps.fetch.outputs.ok == 'true'
