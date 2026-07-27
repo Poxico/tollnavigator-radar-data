@@ -8,11 +8,16 @@ Cel:
 - świeży plik z OSM może dodawać i aktualizować radary,
 - ale nie może przypadkowo skasować istotnych radarów z poprzedniej dobrej bazy,
 - brakujące elementy są zachowywane ze starej bazy jako carry-over,
-- jeśli zniknięć jest zbyt dużo, workflow kończy się błędem i NIE publikuje nowej bazy.
+- brakujące elementy ze świeżego OSM są zachowywane ze starej bazy,
+- większe zniknięcia są raportowane jako ostrzeżenie, ale nie blokują publikacji,
+  bo celem jest niedopuszczenie do przypadkowego skasowania działających radarów.
 
-Domyślne limity:
-- OPP: maksymalnie 1 brakująca para OPP względem poprzedniej bazy,
-- stacjonarne: maksymalnie 3 brakujące fotoradary stacjonarne względem poprzedniej bazy.
+Progi ostrzeżeń:
+- OPP: więcej niż 1 brakująca para OPP względem poprzedniej bazy,
+- stacjonarne: więcej niż 3 brakujące fotoradary stacjonarne względem poprzedniej bazy.
+
+Workflow zatrzymujemy tylko wtedy, gdy świeży plik wygląda ewidentnie na uszkodzony,
+np. ma mniej niż MIN_FRESH_CAMERA_COUNT kamer.
 
 Ręczne usuwanie:
 - opcjonalny plik manual_removed_speed_cameras.json pozwala świadomie usunąć wpisy.
@@ -30,6 +35,7 @@ from typing import Any
 
 MAX_MISSING_OPP_PAIRS = 1
 MAX_MISSING_FIXED_CAMERAS = 3
+MIN_FRESH_CAMERA_COUNT = 1000
 
 
 def fail(message: str) -> None:
@@ -184,6 +190,12 @@ def merge_databases(
         remove_opp_pair_ids,
     )
 
+    if len(fresh_cameras) < MIN_FRESH_CAMERA_COUNT:
+        fail(
+            "świeża baza wygląda na uszkodzoną: "
+            f"{len(fresh_cameras)} kamer < {MIN_FRESH_CAMERA_COUNT}"
+        )
+
     if not previous:
         merged = recalc_counts(fresh, sort_cameras(fresh_cameras))
         report = {
@@ -215,21 +227,24 @@ def merge_databases(
     previous_opp_pairs = complete_opp_pair_ids(previous_cameras)
     missing_opp_pairs = sorted(previous_opp_pairs - fresh_opp_pairs)
 
+    warnings: list[str] = []
+
     if len(missing_opp_pairs) > MAX_MISSING_OPP_PAIRS:
-        fail(
-            "zniknęło zbyt dużo par OPP: "
+        warnings.append(
+            "zniknęło dużo par OPP ze świeżego OSM: "
             f"{len(missing_opp_pairs)} > {MAX_MISSING_OPP_PAIRS}; "
-            f"przykłady: {missing_opp_pairs[:10]}"
+            f"zostaną zachowane ze starej bazy; przykłady: {missing_opp_pairs[:10]}"
         )
 
     if len(missing_fixed_ids) > MAX_MISSING_FIXED_CAMERAS:
-        fail(
-            "zniknęło zbyt dużo fotoradarów stacjonarnych: "
+        warnings.append(
+            "zniknęło dużo fotoradarów stacjonarnych ze świeżego OSM: "
             f"{len(missing_fixed_ids)} > {MAX_MISSING_FIXED_CAMERAS}; "
-            f"przykłady: {missing_fixed_ids[:10]}"
+            f"zostaną zachowane ze starej bazy; przykłady: {missing_fixed_ids[:10]}"
         )
 
     # Budujemy wynik: świeża baza + brakujące elementy ze starej dobrej bazy.
+    # Brakujących elementów nie kasujemy automatycznie.
     merged_by_id: dict[str, dict[str, Any]] = {}
     for cam in fresh_cameras:
         cid = camera_id(cam)
@@ -275,6 +290,9 @@ def merge_databases(
         "previous_average": len([c for c in previous_cameras if is_average(c)]),
         "missing_fixed_from_fresh": len(missing_fixed_ids),
         "missing_opp_pairs_from_fresh": len(missing_opp_pairs),
+        "too_many_missing_fixed_warning": len(missing_fixed_ids) > MAX_MISSING_FIXED_CAMERAS,
+        "too_many_missing_opp_warning": len(missing_opp_pairs) > MAX_MISSING_OPP_PAIRS,
+        "warnings": warnings,
         "preserved_fixed": len(preserved_fixed),
         "preserved_opp_pairs": len(preserved_opp_pairs),
         "preserved_fixed_ids": preserved_fixed,
@@ -323,6 +341,8 @@ def main() -> int:
     print(f"Radary: {merged['count']} | stacjonarne: {merged['count_fixed']} | OPP: {merged['count_average']} ({merged['count_average'] // 2} par)")
     if report.get("merge_enabled"):
         print(f"Zachowane ze starej bazy: fixed={report['preserved_fixed']}, OPP pary={report['preserved_opp_pairs']}")
+        for warning in report.get("warnings", []):
+            print(f"OSTRZEŻENIE SCALANIA: {warning}")
     return 0
 
 
