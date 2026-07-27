@@ -1,0 +1,5 @@
+{
+  "remove_ids": [],
+  "remove_opp_pair_ids": [],
+  "_comment": "Wpisuj tu tylko ręcznie potwierdzone usunięcia. remove_ids dla sc_..., remove_opp_pair_ids dla oppPairId bez _start/_end."
+}
