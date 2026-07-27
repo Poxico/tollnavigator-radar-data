@@ -1,0 +1,133 @@
+name: Update TollNavigator rest areas
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/update-rest-areas.yml'
+      - 'scripts/should_update_rest_areas.py'
+      - 'manual_removed_rest_areas.json'
+      - 'data/rest_areas_updater_bundle.part*'
+  schedule:
+    # Workflow sprawdza bazę co tydzień, lecz pełne odświeżenie wykonuje co około 14 dni.
+    - cron: '17 4 * * 1'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Ta sama kolejka co w workflow radarów — publikacje Pages nie mogą się nałożyć.
+concurrency:
+  group: tollnavigator-pages
+  cancel-in-progress: false
+
+jobs:
+  update-rest-areas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade requests
+
+      - name: Restore updater tools and safe baseline
+        run: |
+          mkdir -p tmp/updater public/tollnavigator
+          cat data/rest_areas_updater_bundle.part* | base64 --decode > tmp/rest_areas_updater.zip
+          unzip -q tmp/rest_areas_updater.zip -d tmp/updater
+          touch public/.nojekyll
+
+          if [ ! -f public/tollnavigator/rest_areas.json ]; then
+            echo 'No published MOP database yet; restoring bundled safe baseline.'
+            gzip -dc tmp/updater/data/rest_areas_baseline.json.gz > public/tollnavigator/rest_areas.json
+          fi
+
+      - name: Check whether scheduled update is due
+        id: due
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            python scripts/should_update_rest_areas.py \
+              --meta public/tollnavigator/rest_areas_meta.json \
+              --min-days 13
+          else
+            echo 'run=true' >> "$GITHUB_OUTPUT"
+            echo 'reason=manual or configuration change' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Preserve previous safe database
+        if: steps.due.outputs.run == 'true'
+        run: cp public/tollnavigator/rest_areas.json tmp/rest_areas_previous.json
+
+      - name: Fetch fresh rest areas from OSM
+        id: fetch
+        if: steps.due.outputs.run == 'true'
+        run: |
+          if python tmp/updater/scripts/fetch_rest_areas.py --output tmp/rest_areas_fresh.json; then
+            echo 'ok=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'ok=false' >> "$GITHUB_OUTPUT"
+            echo 'OSM download failed. Keeping the previous safe MOP database.'
+          fi
+
+      - name: Safely merge with previous database
+        if: steps.due.outputs.run == 'true' && steps.fetch.outputs.ok == 'true'
+        run: |
+          python tmp/updater/scripts/merge_rest_areas.py \
+            --previous tmp/rest_areas_previous.json \
+            --fresh tmp/rest_areas_fresh.json \
+            --manual-removed manual_removed_rest_areas.json \
+            --output public/tollnavigator/rest_areas.json
+
+      - name: Validate database and create metadata
+        if: steps.due.outputs.run == 'true'
+        run: |
+          python tmp/updater/scripts/validate_rest_areas.py \
+            --current public/tollnavigator/rest_areas.json \
+            --previous tmp/rest_areas_previous.json \
+            --manual-removed manual_removed_rest_areas.json \
+            --meta public/tollnavigator/rest_areas_meta.json
+
+      - name: Commit generated database
+        if: steps.due.outputs.run == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          git add public/tollnavigator/rest_areas.json \
+                  public/tollnavigator/rest_areas_meta.json \
+                  public/.nojekyll
+
+          if git diff --cached --quiet; then
+            echo 'No MOP database changes to commit.'
+          else
+            git commit -m 'Update TollNavigator rest area database'
+            git push
+          fi
+
+      - name: Configure GitHub Pages
+        if: steps.due.outputs.run == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        if: steps.due.outputs.run == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        if: steps.due.outputs.run == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
