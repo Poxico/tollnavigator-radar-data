@@ -1,19 +1,10 @@
-name: Update TollNavigator rest areas
+name: Diagnose TollNavigator rest areas from OSM (manual only)
 
+# OSM is not the authoritative TollNavigator MOP source. The production database
+# comes from GDDKiA data and this workflow may only be started manually for
+# auxiliary comparison. It must never overwrite the production MOP database.
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/update-rest-areas.yml'
-      - 'scripts/should_update_rest_areas.py'
-      - 'scripts/fetch_rest_areas_payload_tiled.py'
-      - 'scripts/normalize_rest_areas_osm.py'
-      - 'scripts/report_rest_areas.py'
-      - 'manual_removed_rest_areas.json'
-      - 'data/rest_areas_bundle_chunk_*'
-  schedule:
-    # Tymczasowo sprawdzamy co tydzień; po pozytywnych testach przejdziemy na około 30 dni.
-    - cron: '17 4 * * 1'
 
 permissions:
   contents: write
@@ -30,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     env:
-      # Do czasu ręcznej oceny raportu nie wolno zmieniać produkcyjnej bazy MOP-ów.
+      # OSM jest wyłącznie źródłem diagnostycznym; aktualizacja produkcji jest zablokowana.
       MOP_APPLY_UPDATES: 'false'
 
     environment:
@@ -71,25 +62,17 @@ jobs:
             gzip -dc tmp/updater/data/rest_areas_baseline.json.gz > public/tollnavigator/rest_areas.json
           fi
 
-      - name: Check whether scheduled update is due
+      - name: Enable manual diagnostic run
         id: due
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ]; then
-            python scripts/should_update_rest_areas.py \
-              --meta public/tollnavigator/rest_areas_meta.json \
-              --min-days 13
-          else
-            echo 'run=true' >> "$GITHUB_OUTPUT"
-            echo 'reason=manual or configuration change' >> "$GITHUB_OUTPUT"
-          fi
+          echo 'run=true' >> "$GITHUB_OUTPUT"
+          echo 'reason=manual OSM diagnostic only' >> "$GITHUB_OUTPUT"
 
       - name: Preserve previous safe database
-        if: steps.due.outputs.run == 'true'
         run: cp public/tollnavigator/rest_areas.json tmp/rest_areas_previous.json
 
       - name: Fetch and normalize fresh rest areas from OSM
         id: fetch
-        if: steps.due.outputs.run == 'true'
         shell: bash
         run: |
           set +e
@@ -113,32 +96,14 @@ jobs:
 
           if [ "$FETCH_CODE" -eq 0 ] && [ "$PARSER_CODE" -eq 0 ]; then
             echo 'ok=true' >> "$GITHUB_OUTPUT"
-            echo 'OSM candidate set built successfully. Production database remains unchanged in diagnostic mode.'
+            echo 'OSM candidate set built successfully. Production database remains unchanged.'
           else
             echo 'ok=false' >> "$GITHUB_OUTPUT"
-            echo "OSM refresh failed (fetch=$FETCH_CODE, parser=$PARSER_CODE). Keeping the previous safe MOP database."
+            echo "OSM diagnostic failed (fetch=$FETCH_CODE, parser=$PARSER_CODE). Production MOP database remains unchanged."
           fi
 
-      - name: Safely merge with previous database
-        if: steps.due.outputs.run == 'true' && steps.fetch.outputs.ok == 'true' && env.MOP_APPLY_UPDATES == 'true'
-        run: |
-          python tmp/updater/scripts/merge_rest_areas.py \
-            --previous tmp/rest_areas_previous.json \
-            --fresh tmp/rest_areas_fresh.json \
-            --manual-removed manual_removed_rest_areas.json \
-            --output public/tollnavigator/rest_areas.json
-
-      - name: Validate database and create metadata
-        if: steps.due.outputs.run == 'true' && steps.fetch.outputs.ok == 'true' && env.MOP_APPLY_UPDATES == 'true'
-        run: |
-          python tmp/updater/scripts/validate_rest_areas.py \
-            --current public/tollnavigator/rest_areas.json \
-            --previous tmp/rest_areas_previous.json \
-            --manual-removed manual_removed_rest_areas.json \
-            --meta public/tollnavigator/rest_areas_meta.json
-
-      - name: Generate detailed MOP update report
-        if: always() && steps.due.outputs.run == 'true'
+      - name: Generate detailed MOP diagnostic report
+        if: always()
         run: |
           python scripts/report_rest_areas.py \
             --previous tmp/rest_areas_previous.json \
@@ -149,7 +114,7 @@ jobs:
             --output public/tollnavigator/rest_areas_report.json
 
       - name: Upload OSM diagnostics
-        if: always() && steps.due.outputs.run == 'true'
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: rest-areas-osm-diagnostics
@@ -163,41 +128,38 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
-      - name: Commit generated database and report
-        if: always() && steps.due.outputs.run == 'true'
+      - name: Commit diagnostic report only
+        if: always()
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
-          git add public/tollnavigator/rest_areas.json \
-                  public/tollnavigator/rest_areas_meta.json \
-                  public/tollnavigator/rest_areas_report.json \
-                  public/.nojekyll
+          git add public/tollnavigator/rest_areas_report.json public/.nojekyll
 
           if git diff --cached --quiet; then
-            echo 'No MOP database or report changes to commit.'
+            echo 'No MOP diagnostic report changes to commit.'
           else
-            git commit -m 'Update TollNavigator rest area database'
+            git commit -m 'Update TollNavigator MOP diagnostic report'
             git push
           fi
 
       - name: Configure GitHub Pages
-        if: always() && steps.due.outputs.run == 'true'
+        if: always()
         uses: actions/configure-pages@v5
 
       - name: Upload GitHub Pages artifact
-        if: always() && steps.due.outputs.run == 'true'
+        if: always()
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
 
       - name: Deploy to GitHub Pages
-        if: always() && steps.due.outputs.run == 'true'
+        if: always()
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Mark unsuccessful OSM refresh
-        if: always() && steps.due.outputs.run == 'true' && steps.fetch.outputs.ok != 'true'
+      - name: Mark unsuccessful OSM diagnostic
+        if: always() && steps.fetch.outputs.ok != 'true'
         run: |
-          echo 'The safe database was preserved, but fresh OSM data was not obtained.'
+          echo 'The production GDDKiA-derived MOP database was preserved; the optional OSM diagnostic was unsuccessful.'
           exit 1
