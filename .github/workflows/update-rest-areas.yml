@@ -7,6 +7,7 @@ on:
       - '.github/workflows/update-rest-areas.yml'
       - 'scripts/should_update_rest_areas.py'
       - 'scripts/fetch_rest_areas_payload_tiled.py'
+      - 'scripts/normalize_rest_areas_osm.py'
       - 'scripts/report_rest_areas.py'
       - 'manual_removed_rest_areas.json'
       - 'data/rest_areas_bundle_chunk_*'
@@ -28,6 +29,9 @@ jobs:
   update-rest-areas:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    env:
+      # Do czasu ręcznej oceny raportu nie wolno zmieniać produkcyjnej bazy MOP-ów.
+      MOP_APPLY_UPDATES: 'false'
 
     environment:
       name: github-pages
@@ -83,7 +87,7 @@ jobs:
         if: steps.due.outputs.run == 'true'
         run: cp public/tollnavigator/rest_areas.json tmp/rest_areas_previous.json
 
-      - name: Fetch fresh rest areas from OSM
+      - name: Fetch and normalize fresh rest areas from OSM
         id: fetch
         if: steps.due.outputs.run == 'true'
         shell: bash
@@ -97,9 +101,11 @@ jobs:
 
           PARSER_CODE=1
           if [ "$FETCH_CODE" -eq 0 ]; then
-            python tmp/updater/scripts/fetch_rest_areas.py \
-              --input-osm tmp/rest_areas_osm_payload.json \
+            python scripts/normalize_rest_areas_osm.py \
+              --input tmp/rest_areas_osm_payload.json \
               --output tmp/rest_areas_fresh.json \
+              --diagnostics tmp/rest_areas_normalize_diagnostics.json \
+              --min-count 100 \
               2>&1 | tee -a tmp/rest_areas_fetch.log
             PARSER_CODE=${PIPESTATUS[0]}
           fi
@@ -107,13 +113,14 @@ jobs:
 
           if [ "$FETCH_CODE" -eq 0 ] && [ "$PARSER_CODE" -eq 0 ]; then
             echo 'ok=true' >> "$GITHUB_OUTPUT"
+            echo 'OSM candidate set built successfully. Production database remains unchanged in diagnostic mode.'
           else
             echo 'ok=false' >> "$GITHUB_OUTPUT"
             echo "OSM refresh failed (fetch=$FETCH_CODE, parser=$PARSER_CODE). Keeping the previous safe MOP database."
           fi
 
       - name: Safely merge with previous database
-        if: steps.due.outputs.run == 'true' && steps.fetch.outputs.ok == 'true'
+        if: steps.due.outputs.run == 'true' && steps.fetch.outputs.ok == 'true' && env.MOP_APPLY_UPDATES == 'true'
         run: |
           python tmp/updater/scripts/merge_rest_areas.py \
             --previous tmp/rest_areas_previous.json \
@@ -122,7 +129,7 @@ jobs:
             --output public/tollnavigator/rest_areas.json
 
       - name: Validate database and create metadata
-        if: steps.due.outputs.run == 'true' && steps.fetch.outputs.ok == 'true'
+        if: steps.due.outputs.run == 'true' && steps.fetch.outputs.ok == 'true' && env.MOP_APPLY_UPDATES == 'true'
         run: |
           python tmp/updater/scripts/validate_rest_areas.py \
             --current public/tollnavigator/rest_areas.json \
@@ -149,6 +156,7 @@ jobs:
           path: |
             tmp/rest_areas_fetch.log
             tmp/rest_areas_tile_diagnostics.json
+            tmp/rest_areas_normalize_diagnostics.json
             tmp/rest_areas_osm_payload.json
             tmp/rest_areas_fresh.json
             public/tollnavigator/rest_areas_report.json
