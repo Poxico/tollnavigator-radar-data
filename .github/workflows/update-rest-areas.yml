@@ -7,6 +7,7 @@ on:
       - '.github/workflows/update-rest-areas.yml'
       - 'scripts/compare_gddkia_mop_database.py'
       - 'scripts/compare_gddkia_mop_database_v2.py'
+      - 'scripts/compare_gddkia_mop_database_v3.py'
 
 permissions:
   contents: write
@@ -37,7 +38,7 @@ jobs:
       - name: Build and compare safe GDDKiA candidate
         run: |
           mkdir -p tmp data
-          python scripts/compare_gddkia_mop_database_v2.py \
+          python scripts/compare_gddkia_mop_database_v3.py \
             --previous public/tollnavigator/rest_areas.json \
             --xlsx tmp/gddkia_mop_current.xlsx \
             --candidate tmp/rest_areas_gddkia_candidate.json \
