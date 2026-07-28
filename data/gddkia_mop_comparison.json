@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T19:33:40Z",
+  "generatedAt": "2026-07-28T19:35:47Z",
   "mode": "diagnostic_only",
   "productionDatabaseModified": false,
   "source": {
@@ -62,39 +62,20 @@
   "comparison": {
     "matchCounts": {
       "coordinate": 4,
-      "exact": 331,
-      "new": 1,
+      "exact": 332,
       "road_km_direction": 79
     },
     "sourceCount": 415,
     "previousCount": 415,
-    "candidateCount": 416,
-    "matchedPreviousCount": 414,
-    "newSourceCount": 1,
-    "preservedMissingPreviousCount": 1,
-    "changedRecordCount": 157,
+    "candidateCount": 415,
+    "matchedPreviousCount": 415,
+    "newSourceCount": 0,
+    "preservedMissingPreviousCount": 0,
+    "changedRecordCount": 158,
     "blockedDestructiveRecordCount": 6,
     "duplicateIds": [],
-    "unmatchedSource": [
-      {
-        "sourceRow": 266,
-        "name": "Jaryszki",
-        "motorway": "S11",
-        "km": 2.132,
-        "direction": "Poznań",
-        "lat": 52.33332,
-        "lon": 17.0189821
-      }
-    ],
-    "preservedMissingPrevious": [
-      {
-        "id": "S11A_JARYSZKI_2_132_POZNAŃ",
-        "name": "Jaryszki",
-        "motorway": "S11A",
-        "km": 2.132,
-        "direction": "Poznań"
-      }
-    ],
+    "unmatchedSource": [],
+    "preservedMissingPrevious": [],
     "changes": [
       {
         "id": "S8_JEŻEWO_618_26_BIAŁYSTOK",
@@ -1462,10 +1443,6 @@
             "old": "Ostróda",
             "new": "OOUR"
           },
-          "motorway": {
-            "old": "s7",
-            "new": "S7"
-          },
           "hasEV": {
             "old": false,
             "new": true
@@ -1640,6 +1617,24 @@
           }
         },
         "parkingBus": 6,
+        "targetCategory": "MOP funkcja komercyjna"
+      },
+      {
+        "id": "S11A_JARYSZKI_2_132_POZNAŃ",
+        "name": "Jaryszki",
+        "method": "exact",
+        "sourceRow": 266,
+        "changes": {
+          "lat": {
+            "old": 52.3333200445406,
+            "new": 52.33332
+          },
+          "lon": {
+            "old": 17.01898212407,
+            "new": 17.0189821
+          }
+        },
+        "parkingBus": 7,
         "targetCategory": "MOP funkcja komercyjna"
       },
       {
@@ -2689,7 +2684,1019 @@
           }
         }
       }
-    ]
+    ],
+    "fieldChangeCounts": {
+      "direction": 4,
+      "hasEV": 52,
+      "hasFuel": 17,
+      "hasHotel": 1,
+      "hasRestaurant": 20,
+      "hasShower": 22,
+      "hasToilet": 3,
+      "lat": 14,
+      "lon": 13,
+      "name": 79,
+      "parkingCar": 5,
+      "parkingTruck": 3
+    },
+    "blockedServiceChangeCounts": {
+      "hasEV": 1,
+      "hasHotel": 3,
+      "hasRestaurant": 2,
+      "hasShower": 2,
+      "hasToilet": 1
+    },
+    "blockedMetadataChangeCounts": {
+      "direction": 4,
+      "name": 78
+    },
+    "blockedMetadataChanges": [
+      {
+        "id": "S8_JEŻEWO_618_26_BIAŁYSTOK",
+        "name": "Jeżewo",
+        "blockedChanges": {
+          "name": {
+            "old": "Jeżewo",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_RADULE_621_4_WARSZAWA",
+        "name": "Radule",
+        "blockedChanges": {
+          "name": {
+            "old": "Radule",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_ZŁOTORIA_631_15_WARSZAWA",
+        "name": "Złotoria",
+        "blockedChanges": {
+          "name": {
+            "old": "Złotoria",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_SZUMOWO_566_46_WARSZAWA",
+        "name": "Szumowo",
+        "blockedChanges": {
+          "name": {
+            "old": "Szumowo",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S10_BIAŁE_BŁOTA_0_9_SZCZECIN",
+        "name": "Białe Błota",
+        "blockedChanges": {
+          "name": {
+            "old": "Białe Błota",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S1_SOSNOWIEC_538_01_ZWARDOŃ",
+        "name": "Sosnowiec",
+        "blockedChanges": {
+          "name": {
+            "old": "Sosnowiec",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S1_LĘDZINY_558_394_ZWARDOŃ",
+        "name": "Lędziny",
+        "blockedChanges": {
+          "name": {
+            "old": "Lędziny",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S1_SOSNOWIEC_541_348_PYRZOWICE",
+        "name": "Sosnowiec",
+        "blockedChanges": {
+          "name": {
+            "old": "Sosnowiec",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S1_LĘDZINY_558_445_PYRZOWICE",
+        "name": "Lędziny",
+        "blockedChanges": {
+          "name": {
+            "old": "Lędziny",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S52_JASIENICA_24_6_CIESZYN",
+        "name": "Jasienica",
+        "blockedChanges": {
+          "name": {
+            "old": "Jasienica",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S52_ŚWIĘTOSZÓWKA_22_01_BIELSKO-BIAŁA",
+        "name": "Świętoszówka",
+        "blockedChanges": {
+          "name": {
+            "old": "Świętoszówka",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S52_POGÓRZE_17_51_BIELSKO-BIAŁA",
+        "name": "Pogórze",
+        "blockedChanges": {
+          "name": {
+            "old": "Pogórze",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S52_OGRODZONA_6_504_CIESZYN",
+        "name": "Ogrodzona",
+        "blockedChanges": {
+          "name": {
+            "old": "Ogrodzona",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S52_GUMNA_6_432_BIELSKO-BIAŁA",
+        "name": "Gumna",
+        "blockedChanges": {
+          "name": {
+            "old": "Gumna",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S52_CIESZYN_3_077_CIESZYN",
+        "name": "Cieszyn",
+        "blockedChanges": {
+          "name": {
+            "old": "Cieszyn",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S52_CIESZYN_2_849_BIELSKO-BIAŁA",
+        "name": "Cieszyn",
+        "blockedChanges": {
+          "name": {
+            "old": "Cieszyn",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_WYSTĘPA_16_5_WARSZAWA",
+        "name": "Występa",
+        "blockedChanges": {
+          "name": {
+            "old": "Występa",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_MOCZYDŁO_0_7_KIELCE",
+        "name": "Moczydło",
+        "blockedChanges": {
+          "name": {
+            "old": "Moczydło",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_PIOTRKÓW_TRYB_327_5_WARSZAWA",
+        "name": "Piotrków Tryb",
+        "blockedChanges": {
+          "name": {
+            "old": "Piotrków Tryb",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_PIOTRKÓW_TRYB_327_6_WARSZAWA",
+        "name": "Piotrków Tryb",
+        "blockedChanges": {
+          "name": {
+            "old": "Piotrków Tryb",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_PROSZENIE_335_1_WARSZAWA",
+        "name": "Proszenie",
+        "blockedChanges": {
+          "name": {
+            "old": "Proszenie",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_STUDZIANKI_343_1_WARSZAWA",
+        "name": "Studzianki",
+        "blockedChanges": {
+          "name": {
+            "old": "Studzianki",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_STUDZIANKI_343_75_WARSZAWA",
+        "name": "Studzianki",
+        "blockedChanges": {
+          "name": {
+            "old": "Studzianki",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_STUDZIANKI_344_4_WARSZAWA",
+        "name": "Studzianki",
+        "blockedChanges": {
+          "name": {
+            "old": "Studzianki",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_LECHÓW_367_72_WARSZAWA",
+        "name": "Lechów",
+        "blockedChanges": {
+          "name": {
+            "old": "Lechów",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_WÓLKA_JAGIELCZYŃSKA_373_66_WARSZAWA",
+        "name": "Wólka Jagielczyńska",
+        "blockedChanges": {
+          "name": {
+            "old": "Wólka Jagielczyńska",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_PODLAS_380_53_WARSZAWA",
+        "name": "Podlas",
+        "blockedChanges": {
+          "name": {
+            "old": "Podlas",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_PODLAS_380_66_WARSZAWA",
+        "name": "Podlas",
+        "blockedChanges": {
+          "name": {
+            "old": "Podlas",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_PROSZENIE_335_05_WROCŁAW",
+        "name": "Proszenie",
+        "blockedChanges": {
+          "name": {
+            "old": "Proszenie",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_PROSZENIE_335_17_WROCŁAW",
+        "name": "Proszenie",
+        "blockedChanges": {
+          "name": {
+            "old": "Proszenie",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_WOLBÓRZ_340_8_WROCŁAW",
+        "name": "Wolbórz",
+        "blockedChanges": {
+          "name": {
+            "old": "Wolbórz",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_STUDZIANKI_343_5_WROCŁAW",
+        "name": "Studzianki",
+        "blockedChanges": {
+          "name": {
+            "old": "Studzianki",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_STUDZIANKI_346_0_WROCŁAW",
+        "name": "Studzianki",
+        "blockedChanges": {
+          "name": {
+            "old": "Studzianki",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_JADWIGÓW_348_3_WROCŁAW",
+        "name": "Jadwigów",
+        "blockedChanges": {
+          "name": {
+            "old": "Jadwigów",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_JAKUBÓW_358_9_WROCŁAW",
+        "name": "Jakubów",
+        "blockedChanges": {
+          "name": {
+            "old": "Jakubów",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_CZERNIEWICE_369_94_WROCŁAW",
+        "name": "Czerniewice",
+        "blockedChanges": {
+          "name": {
+            "old": "Czerniewice",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_WÓLKA_JAGIELCZYŃSKA_372_5_WROCŁAW",
+        "name": "Wólka Jagielczyńska",
+        "blockedChanges": {
+          "name": {
+            "old": "Wólka Jagielczyńska",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_PODLAS_380_8_WROCŁAW",
+        "name": "Podlas",
+        "blockedChanges": {
+          "name": {
+            "old": "Podlas",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_HUTA_ZAWADZKA_408_1_WROCŁAW",
+        "name": "Huta Zawadzka",
+        "blockedChanges": {
+          "name": {
+            "old": "Huta Zawadzka",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_NOWE_POLE_80_49_WARSZAWA",
+        "name": "Nowe Pole",
+        "blockedChanges": {
+          "name": {
+            "old": "Nowe Pole",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_ELBLĄG_0_525_WARSZAWA",
+        "name": "Elbląg",
+        "blockedChanges": {
+          "name": {
+            "old": "Elbląg",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_RZECZNA_13_622_GDAŃSK",
+        "name": "Rzeczna",
+        "blockedChanges": {
+          "name": {
+            "old": "Rzeczna",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_WITRAMOWO_14_085_WARSZAWA",
+        "name": "Witramowo",
+        "blockedChanges": {
+          "name": {
+            "old": "Witramowo",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "s7_OSTRÓDA_64_34_GDAŃSK",
+        "name": "Ostróda",
+        "blockedChanges": {
+          "name": {
+            "old": "Ostróda",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S3_ŻDŻARY_67_353_ŚWINOUJUŚCIE",
+        "name": "Żdżary",
+        "blockedChanges": {
+          "name": {
+            "old": "Żdżary",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S3_ŁOZIENICA_71_7_GORZÓW_WLKP",
+        "name": "Łozienica",
+        "blockedChanges": {
+          "name": {
+            "old": "Łozienica",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "A6_BARNISŁAW_0_95_BERLIN",
+        "name": "Barnisław",
+        "blockedChanges": {
+          "name": {
+            "old": "Barnisław",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "A6_BARNISŁAW_0_95_SZCZECIN",
+        "name": "Barnisław",
+        "blockedChanges": {
+          "name": {
+            "old": "Barnisław",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "A6_KOŁBASKOWO_3_0_BERLIN",
+        "name": "Kołbaskowo",
+        "blockedChanges": {
+          "name": {
+            "old": "Kołbaskowo",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_WORÓW_413_8_KRAKÓW",
+        "name": "Worów",
+        "blockedChanges": {
+          "name": {
+            "old": "Worów",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_GRÓJEC_415_2_WARSZAWA",
+        "name": "Grójec",
+        "blockedChanges": {
+          "name": {
+            "old": "Grójec",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_SKURÓW_419_525_WARSZAWA",
+        "name": "Skurów",
+        "blockedChanges": {
+          "name": {
+            "old": "Skurów",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_SKURÓW_419_582_KRAKÓW",
+        "name": "Skurów",
+        "blockedChanges": {
+          "name": {
+            "old": "Skurów",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_BRONISZEW_429_5_KRAKÓW",
+        "name": "Broniszew",
+        "blockedChanges": {
+          "name": {
+            "old": "Broniszew",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_BRONISZEW_429_7_WARSZAWA",
+        "name": "Broniszew",
+        "blockedChanges": {
+          "name": {
+            "old": "Broniszew",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_PROMNA_KOLONIA_435_0_KRAKÓW",
+        "name": "Promna Kolonia",
+        "blockedChanges": {
+          "name": {
+            "old": "Promna Kolonia",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_PROMNA_KOLONIA_435_55_WARSZAWA",
+        "name": "Promna Kolonia",
+        "blockedChanges": {
+          "name": {
+            "old": "Promna Kolonia",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_SUCHA_WSCHODNIA_444_6_WARSZAWA",
+        "name": "Sucha Wschodnia",
+        "blockedChanges": {
+          "name": {
+            "old": "Sucha Wschodnia",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_SUCHA_444_7_KRAKÓW",
+        "name": "Sucha",
+        "blockedChanges": {
+          "name": {
+            "old": "Sucha",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_KAMIEŃ_447_1_KRAKÓW",
+        "name": "Kamień",
+        "blockedChanges": {
+          "name": {
+            "old": "Kamień",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_KIEŁBÓW_450_1_KRAKÓW",
+        "name": "Kiełbów",
+        "blockedChanges": {
+          "name": {
+            "old": "Kiełbów",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_GÓZD_451_1_KRAKÓW",
+        "name": "Gózd",
+        "blockedChanges": {
+          "name": {
+            "old": "Gózd",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_GÓZD_451_2_WARSZAWA",
+        "name": "Gózd",
+        "blockedChanges": {
+          "name": {
+            "old": "Gózd",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_ŻDŻARY_455_5_KRAKÓW",
+        "name": "Żdżary",
+        "blockedChanges": {
+          "name": {
+            "old": "Żdżary",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S7_BARAK_504_2_WARSZAWA",
+        "name": "Barak",
+        "blockedChanges": {
+          "name": {
+            "old": "Barak",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_GURBA_411_2_WARSZAWA",
+        "name": "Gurba",
+        "blockedChanges": {
+          "name": {
+            "old": "Gurba",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_MSZCZONÓW_414_18_WROCŁAW",
+        "name": "Mszczonów",
+        "blockedChanges": {
+          "name": {
+            "old": "Mszczonów",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_RADZIEJOWICE_417_865_WROCŁAW",
+        "name": "Radziejowice",
+        "blockedChanges": {
+          "name": {
+            "old": "Radziejowice",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_EMILIANÓW_487_39_BIAŁYSTOK",
+        "name": "Emilianów",
+        "blockedChanges": {
+          "name": {
+            "old": "Emilianów",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_MAŁOPOLE_491_0_BIAŁYSTOK",
+        "name": "Małopole",
+        "blockedChanges": {
+          "name": {
+            "old": "Małopole",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_TROJANY_493_5_WARSZAWA",
+        "name": "Trojany",
+        "blockedChanges": {
+          "name": {
+            "old": "Trojany",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S8_GAJ_501_75_WARSZAWA",
+        "name": "Gaj",
+        "blockedChanges": {
+          "name": {
+            "old": "Gaj",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "A4_OLEŚNICA_MAŁA_183_987_WROCŁAW",
+        "name": "Oleśnica Mała",
+        "blockedChanges": {
+          "direction": {
+            "old": "Wrocław",
+            "source": "Katowice",
+            "applied": false,
+            "reason": "direction changes require review"
+          }
+        }
+      },
+      {
+        "id": "A4_WITOWICE_183_887_KATOWICE",
+        "name": "Witowice",
+        "blockedChanges": {
+          "direction": {
+            "old": "Katowice",
+            "source": "Wrocław",
+            "applied": false,
+            "reason": "direction changes require review"
+          }
+        }
+      },
+      {
+        "id": "A4_KRZYWA_63_66_ZGORZELEC_OLSZYNA",
+        "name": "Krzywa",
+        "blockedChanges": {
+          "name": {
+            "old": "Krzywa",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "A4_STRUPICE_76_3_WROCŁAW",
+        "name": "Strupice",
+        "blockedChanges": {
+          "name": {
+            "old": "Strupice",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "A4_PAWLIKOWICE_76_7_ZGORZELEC_OLSZYNA",
+        "name": "Pawlikowice",
+        "blockedChanges": {
+          "name": {
+            "old": "Pawlikowice",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "A4_GNIEWOMIERZ_96_52_ZGORZELEC_OLSZYNA",
+        "name": "Gniewomierz",
+        "blockedChanges": {
+          "name": {
+            "old": "Gniewomierz",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "A4_JAROSŁAW_120_015_WROCŁAW",
+        "name": "Jarosław",
+        "blockedChanges": {
+          "name": {
+            "old": "Jarosław",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "A4_PIOTROWCE_129_89_ZGORZELEC_OLSZYNA",
+        "name": "Piotrowce",
+        "blockedChanges": {
+          "name": {
+            "old": "Piotrowce",
+            "source": "OOUR",
+            "applied": false,
+            "reason": "source name is generic and less informative"
+          }
+        }
+      },
+      {
+        "id": "S3_RACULA_WSCHÓD_197_8_KOŁBASKOWO",
+        "name": "Racula Wschód",
+        "blockedChanges": {
+          "direction": {
+            "old": "Kołbaskowo",
+            "source": "Zielona Góra",
+            "applied": false,
+            "reason": "direction changes require review"
+          }
+        }
+      },
+      {
+        "id": "S3_RACULA_ZACHÓD_197_8_WROCŁAW",
+        "name": "Racula Zachód",
+        "blockedChanges": {
+          "direction": {
+            "old": "Wrocław",
+            "source": "Zielona Góra",
+            "applied": false,
+            "reason": "direction changes require review"
+          }
+        }
+      }
+    ],
+    "blockedMetadataRecordCount": 82
   },
   "safeToConsiderPublishing": true
 }
