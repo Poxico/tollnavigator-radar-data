@@ -7,6 +7,7 @@ on:
       - '.github/workflows/update-rest-areas.yml'
       - 'scripts/should_update_rest_areas.py'
       - 'scripts/fetch_rest_areas_payload_tiled.py'
+      - 'scripts/report_rest_areas.py'
       - 'manual_removed_rest_areas.json'
       - 'data/rest_areas_bundle_chunk_*'
   schedule:
@@ -97,17 +98,6 @@ jobs:
             echo 'OSM download failed. Keeping the previous safe MOP database.'
           fi
 
-      - name: Upload OSM diagnostics
-        if: always() && steps.due.outputs.run == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: rest-areas-osm-diagnostics
-          path: |
-            tmp/rest_areas_osm_payload.json
-            tmp/rest_areas_fresh.json
-          if-no-files-found: ignore
-          retention-days: 7
-
       - name: Safely merge with previous database
         if: steps.due.outputs.run == 'true' && steps.fetch.outputs.ok == 'true'
         run: |
@@ -126,6 +116,29 @@ jobs:
             --manual-removed manual_removed_rest_areas.json \
             --meta public/tollnavigator/rest_areas_meta.json
 
+      - name: Generate detailed MOP update report
+        if: always() && steps.due.outputs.run == 'true'
+        run: |
+          python scripts/report_rest_areas.py \
+            --previous tmp/rest_areas_previous.json \
+            --fresh tmp/rest_areas_fresh.json \
+            --current public/tollnavigator/rest_areas.json \
+            --raw-osm tmp/rest_areas_osm_payload.json \
+            --fetch-ok "${{ steps.fetch.outputs.ok }}" \
+            --output public/tollnavigator/rest_areas_report.json
+
+      - name: Upload OSM diagnostics
+        if: always() && steps.due.outputs.run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rest-areas-osm-diagnostics
+          path: |
+            tmp/rest_areas_osm_payload.json
+            tmp/rest_areas_fresh.json
+            public/tollnavigator/rest_areas_report.json
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Commit generated database
         if: steps.due.outputs.run == 'true'
         run: |
@@ -134,10 +147,11 @@ jobs:
 
           git add public/tollnavigator/rest_areas.json \
                   public/tollnavigator/rest_areas_meta.json \
+                  public/tollnavigator/rest_areas_report.json \
                   public/.nojekyll
 
           if git diff --cached --quiet; then
-            echo 'No MOP database changes to commit.'
+            echo 'No MOP database or report changes to commit.'
           else
             git commit -m 'Update TollNavigator rest area database'
             git push
