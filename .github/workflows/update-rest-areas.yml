@@ -12,6 +12,7 @@ on:
       - 'scripts/compare_gddkia_mop_database_v2.py'
       - 'scripts/compare_gddkia_mop_database_v3.py'
       - 'scripts/compare_gddkia_mop_database_v4.py'
+      - 'scripts/compare_gddkia_mop_database_v5.py'
       - 'scripts/publish_gddkia_mop_candidate.py'
 
 permissions:
@@ -53,7 +54,7 @@ jobs:
           mkdir -p tmp data public/tollnavigator
           cp public/tollnavigator/rest_areas.json tmp/rest_areas_previous.json
 
-          python scripts/compare_gddkia_mop_database_v4.py \
+          python scripts/compare_gddkia_mop_database_v5.py \
             --previous tmp/rest_areas_previous.json \
             --xlsx tmp/gddkia_mop_current.xlsx \
             --candidate tmp/rest_areas_gddkia_candidate.json \
