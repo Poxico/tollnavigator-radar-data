@@ -11,7 +11,7 @@ on:
       - 'manual_removed_rest_areas.json'
       - 'data/rest_areas_bundle_chunk_*'
   schedule:
-    # Workflow sprawdza bazę co tydzień, lecz pełne odświeżenie wykonuje co około 14 dni.
+    # Tymczasowo sprawdzamy co tydzień; po pozytywnych testach przejdziemy na około 30 dni.
     - cron: '17 4 * * 1'
 
 permissions:
@@ -86,16 +86,30 @@ jobs:
       - name: Fetch fresh rest areas from OSM
         id: fetch
         if: steps.due.outputs.run == 'true'
+        shell: bash
         run: |
-          if python scripts/fetch_rest_areas_payload_tiled.py \
-                --output tmp/rest_areas_osm_payload.json \
-             && python tmp/updater/scripts/fetch_rest_areas.py \
-                --input-osm tmp/rest_areas_osm_payload.json \
-                --output tmp/rest_areas_fresh.json; then
+          set +e
+          python scripts/fetch_rest_areas_payload_tiled.py \
+            --output tmp/rest_areas_osm_payload.json \
+            --diagnostics tmp/rest_areas_tile_diagnostics.json \
+            2>&1 | tee tmp/rest_areas_fetch.log
+          FETCH_CODE=${PIPESTATUS[0]}
+
+          PARSER_CODE=1
+          if [ "$FETCH_CODE" -eq 0 ]; then
+            python tmp/updater/scripts/fetch_rest_areas.py \
+              --input-osm tmp/rest_areas_osm_payload.json \
+              --output tmp/rest_areas_fresh.json \
+              2>&1 | tee -a tmp/rest_areas_fetch.log
+            PARSER_CODE=${PIPESTATUS[0]}
+          fi
+          set -e
+
+          if [ "$FETCH_CODE" -eq 0 ] && [ "$PARSER_CODE" -eq 0 ]; then
             echo 'ok=true' >> "$GITHUB_OUTPUT"
           else
             echo 'ok=false' >> "$GITHUB_OUTPUT"
-            echo 'OSM download failed. Keeping the previous safe MOP database.'
+            echo "OSM refresh failed (fetch=$FETCH_CODE, parser=$PARSER_CODE). Keeping the previous safe MOP database."
           fi
 
       - name: Safely merge with previous database
@@ -108,7 +122,7 @@ jobs:
             --output public/tollnavigator/rest_areas.json
 
       - name: Validate database and create metadata
-        if: steps.due.outputs.run == 'true'
+        if: steps.due.outputs.run == 'true' && steps.fetch.outputs.ok == 'true'
         run: |
           python tmp/updater/scripts/validate_rest_areas.py \
             --current public/tollnavigator/rest_areas.json \
@@ -133,14 +147,16 @@ jobs:
         with:
           name: rest-areas-osm-diagnostics
           path: |
+            tmp/rest_areas_fetch.log
+            tmp/rest_areas_tile_diagnostics.json
             tmp/rest_areas_osm_payload.json
             tmp/rest_areas_fresh.json
             public/tollnavigator/rest_areas_report.json
           if-no-files-found: ignore
           retention-days: 7
 
-      - name: Commit generated database
-        if: steps.due.outputs.run == 'true'
+      - name: Commit generated database and report
+        if: always() && steps.due.outputs.run == 'true'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -158,16 +174,22 @@ jobs:
           fi
 
       - name: Configure GitHub Pages
-        if: steps.due.outputs.run == 'true'
+        if: always() && steps.due.outputs.run == 'true'
         uses: actions/configure-pages@v5
 
       - name: Upload GitHub Pages artifact
-        if: steps.due.outputs.run == 'true'
+        if: always() && steps.due.outputs.run == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
 
       - name: Deploy to GitHub Pages
-        if: steps.due.outputs.run == 'true'
+        if: always() && steps.due.outputs.run == 'true'
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Mark unsuccessful OSM refresh
+        if: always() && steps.due.outputs.run == 'true' && steps.fetch.outputs.ok != 'true'
+        run: |
+          echo 'The safe database was preserved, but fresh OSM data was not obtained.'
+          exit 1
