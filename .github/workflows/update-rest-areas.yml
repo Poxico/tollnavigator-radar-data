@@ -1,21 +1,21 @@
-name: Inspect TollNavigator GDDKiA MOP source
+name: Compare TollNavigator MOP database with GDDKiA
 
 on:
   workflow_dispatch:
   push:
     paths:
       - '.github/workflows/update-rest-areas.yml'
-      - 'scripts/inspect_gddkia_mop_xlsx.py'
+      - 'scripts/compare_gddkia_mop_database.py'
 
 permissions:
   contents: write
 
 concurrency:
-  group: tollnavigator-gddkia-mop-inspection
+  group: tollnavigator-gddkia-mop-comparison
   cancel-in-progress: true
 
 jobs:
-  inspect-gddkia-mop-source:
+  compare-gddkia-mop-database:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -33,33 +33,44 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade requests beautifulsoup4 openpyxl
 
-      - name: Download and inspect official GDDKiA workbook
+      - name: Build and compare safe GDDKiA candidate
         run: |
           mkdir -p tmp data
-          python scripts/inspect_gddkia_mop_xlsx.py \
+          python scripts/compare_gddkia_mop_database.py \
+            --previous public/tollnavigator/rest_areas.json \
             --xlsx tmp/gddkia_mop_current.xlsx \
-            --output data/gddkia_mop_structure.json \
-            --summary tmp/gddkia_mop_summary.md
-          cat tmp/gddkia_mop_summary.md >> "$GITHUB_STEP_SUMMARY"
+            --candidate tmp/rest_areas_gddkia_candidate.json \
+            --report data/gddkia_mop_comparison.json \
+            --summary tmp/gddkia_mop_comparison.md
+          cat tmp/gddkia_mop_comparison.md >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Upload workbook and inspection report
+      - name: Upload workbook, candidate and comparison
         uses: actions/upload-artifact@v4
         with:
-          name: gddkia-mop-source-inspection
+          name: gddkia-mop-safe-comparison
           path: |
             tmp/gddkia_mop_current.xlsx
-            tmp/gddkia_mop_summary.md
-            data/gddkia_mop_structure.json
+            tmp/rest_areas_gddkia_candidate.json
+            tmp/gddkia_mop_comparison.md
+            data/gddkia_mop_comparison.json
           retention-days: 14
 
-      - name: Commit inspection report
+      - name: Commit diagnostic comparison report
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/gddkia_mop_structure.json
+          git add data/gddkia_mop_comparison.json
           if git diff --cached --quiet; then
-            echo 'GDDKiA workbook structure has not changed.'
+            echo 'GDDKiA comparison report has not changed.'
           else
-            git commit -m 'Update GDDKiA MOP workbook inspection'
+            git commit -m 'Update GDDKiA MOP database comparison'
             git push
           fi
+
+      - name: Confirm production database was not modified
+        run: |
+          if ! git diff --quiet HEAD -- public/tollnavigator/rest_areas.json; then
+            echo 'Production MOP database was unexpectedly modified.'
+            exit 1
+          fi
+          echo 'Production MOP database remains unchanged.'
