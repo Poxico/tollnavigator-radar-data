@@ -1,7 +1,10 @@
-name: Compare TollNavigator MOP database with GDDKiA
+name: Update TollNavigator rest areas from GDDKiA
 
 on:
   workflow_dispatch:
+  schedule:
+    # Raz w miesiącu, pierwszego dnia miesiąca o 04:17 UTC.
+    - cron: '17 4 1 * *'
   push:
     paths:
       - '.github/workflows/update-rest-areas.yml'
@@ -9,18 +12,26 @@ on:
       - 'scripts/compare_gddkia_mop_database_v2.py'
       - 'scripts/compare_gddkia_mop_database_v3.py'
       - 'scripts/compare_gddkia_mop_database_v4.py'
+      - 'scripts/publish_gddkia_mop_candidate.py'
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
+# Ta sama kolejka co w workflow radarów — publikacje GitHub Pages nie mogą się nałożyć.
 concurrency:
-  group: tollnavigator-gddkia-mop-comparison
-  cancel-in-progress: true
+  group: tollnavigator-pages
+  cancel-in-progress: false
 
 jobs:
-  compare-gddkia-mop-database:
+  update-rest-areas:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout repository
@@ -36,44 +47,74 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade requests beautifulsoup4 openpyxl
 
-      - name: Build and compare safe GDDKiA candidate
+      - name: Build safe GDDKiA candidate and comparison
         run: |
-          mkdir -p tmp data
+          set -euo pipefail
+          mkdir -p tmp data public/tollnavigator
+          cp public/tollnavigator/rest_areas.json tmp/rest_areas_previous.json
+
           python scripts/compare_gddkia_mop_database_v4.py \
-            --previous public/tollnavigator/rest_areas.json \
+            --previous tmp/rest_areas_previous.json \
             --xlsx tmp/gddkia_mop_current.xlsx \
             --candidate tmp/rest_areas_gddkia_candidate.json \
             --report data/gddkia_mop_comparison.json \
             --summary tmp/gddkia_mop_comparison.md
+
           cat tmp/gddkia_mop_comparison.md >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Upload workbook, candidate and comparison
+      - name: Validate and publish safe candidate
+        run: |
+          set -euo pipefail
+          python scripts/publish_gddkia_mop_candidate.py \
+            --candidate tmp/rest_areas_gddkia_candidate.json \
+            --report data/gddkia_mop_comparison.json \
+            --previous tmp/rest_areas_previous.json \
+            --output public/tollnavigator/rest_areas.json \
+            --meta public/tollnavigator/rest_areas_meta.json \
+            --public-report public/tollnavigator/rest_areas_report.json
+          touch public/.nojekyll
+
+      - name: Upload GDDKiA diagnostics
         uses: actions/upload-artifact@v4
         with:
-          name: gddkia-mop-safe-comparison
+          name: gddkia-mop-update-diagnostics
           path: |
             tmp/gddkia_mop_current.xlsx
+            tmp/rest_areas_previous.json
             tmp/rest_areas_gddkia_candidate.json
             tmp/gddkia_mop_comparison.md
             data/gddkia_mop_comparison.json
+            public/tollnavigator/rest_areas_meta.json
+            public/tollnavigator/rest_areas_report.json
           retention-days: 14
 
-      - name: Commit diagnostic comparison report
+      - name: Commit generated database, metadata and reports
         run: |
+          set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/gddkia_mop_comparison.json
+
+          git add public/tollnavigator/rest_areas.json \
+                  public/tollnavigator/rest_areas_meta.json \
+                  public/tollnavigator/rest_areas_report.json \
+                  data/gddkia_mop_comparison.json \
+                  public/.nojekyll
+
           if git diff --cached --quiet; then
-            echo 'GDDKiA comparison report has not changed.'
+            echo 'No MOP database changes to commit.'
           else
-            git commit -m 'Update GDDKiA MOP database comparison'
+            git commit -m 'Update TollNavigator MOP database from GDDKiA'
             git push
           fi
 
-      - name: Confirm production database was not modified
-        run: |
-          if ! git diff --quiet HEAD -- public/tollnavigator/rest_areas.json; then
-            echo 'Production MOP database was unexpectedly modified.'
-            exit 1
-          fi
-          echo 'Production MOP database remains unchanged.'
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
