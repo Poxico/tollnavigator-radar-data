@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-28T17:35:48.761024Z",
+  "status": "fallback_or_no_fresh_data",
+  "rawOsm": {
+    "available": false
+  },
+  "database": {
+    "previousCount": 415,
+    "freshCount": 0,
+    "currentCount": 415,
+    "previousUniqueIds": 415,
+    "currentUniqueIds": 415
+  },
+  "matching": {
+    "matchedCount": 0,
+    "byMethod": {},
+    "unmatchedFreshCount": 0,
+    "unmatchedPreviousCount": 415,
+    "methodNote": "Diagnostic estimate using application ID, OSM ID and conservative nearby matching."
+  },
+  "changes": {
+    "addedToFinalCount": 0,
+    "removedFromFinalCount": 0,
+    "modifiedFinalCount": 0,
+    "serviceGains": {},
+    "serviceLosses": {}
+  },
+  "details": {
+    "addedFinalIds": [],
+    "removedFinalIds": [],
+    "modifiedFinalRecords": [],
+    "sampleMatches": [],
+    "unmatchedFresh": []
+  }
+}
