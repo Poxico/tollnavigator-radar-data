@@ -1,13 +1,13 @@
 {
-  "version": "2026-07-27",
-  "generated": "2026-07-27T19:02:58.498505+00:00",
+  "version": "2026-08-01",
+  "generated": "2026-08-01T05:36:51.942713+00:00",
   "source": "OpenStreetMap contributors, ODbL",
   "count": 2709,
   "count_fixed": 1927,
   "count_average": 782,
   "average_pairs": 391,
-  "previous_count": 2708,
-  "previous_fixed": 1926,
+  "previous_count": 2709,
+  "previous_fixed": 1927,
   "previous_average": 782,
   "previous_average_pairs": 391,
   "missing_fixed_vs_previous_after_merge": 0,
@@ -16,10 +16,10 @@
   "average_relations_ok": 391,
   "average_relations_skipped": 31,
   "fixed_duplicates_removed": 186,
-  "merge_preserved_fixed": 0,
+  "merge_preserved_fixed": 1,
   "merge_preserved_opp_pairs": 0,
-  "merge_missing_fixed_from_fresh": 0,
+  "merge_missing_fixed_from_fresh": 1,
   "merge_missing_opp_pairs_from_fresh": 0,
-  "sha256": "cab8a0a80e94c885adcbc028a90efa545a21d697f35d88f5e680810932f2422e",
-  "meta_generated": "2026-07-27T19:02:58.582132+00:00"
+  "sha256": "d05c993cc9df6f7f9b0f98f480dd8ef8b77022c6fd4f1994bc0d9d6734bae6ff",
+  "meta_generated": "2026-08-01T05:36:52.009357+00:00"
 }
