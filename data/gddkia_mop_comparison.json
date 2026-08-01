@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T20:26:24Z",
+  "generatedAt": "2026-08-01T06:42:50Z",
   "mode": "diagnostic_only",
   "productionDatabaseModified": false,
   "source": {
@@ -2381,69 +2381,9 @@
     "effectiveChanges": [],
     "effectiveRemovedRecordCount": 0,
     "effectiveRemovedRecords": [],
-    "legacyOsmEnrichmentReconciliationCount": 4,
-    "legacyOsmEnrichmentFieldCounts": {
-      "hasFuel": 3,
-      "hasRestaurant": 1
-    },
-    "legacyOsmEnrichmentReconciliations": [
-      {
-        "id": "S6_WYSZOGÓRA_ZACHÓD_35_4_SZCZECIN",
-        "name": "Wyszogóra Zachód",
-        "reconciledFields": {
-          "hasFuel": {
-            "old": false,
-            "effective": true,
-            "reason": "existing OSM fuel brand already confirmed the station",
-            "evidence": [
-              "MOL"
-            ]
-          }
-        }
-      },
-      {
-        "id": "S6_WYSZOGÓRA_WSCHÓD_34_8_KOSZALIN",
-        "name": "Wyszogóra Wschód",
-        "reconciledFields": {
-          "hasFuel": {
-            "old": false,
-            "effective": true,
-            "reason": "existing OSM fuel brand already confirmed the station",
-            "evidence": [
-              "MOL"
-            ]
-          }
-        }
-      },
-      {
-        "id": "S17_KOŁBIEL_24_2_WARSZAWA",
-        "name": "Kołbiel",
-        "reconciledFields": {
-          "hasFuel": {
-            "old": false,
-            "effective": true,
-            "reason": "existing OSM fuel brand already confirmed the station",
-            "evidence": [
-              "BP"
-            ]
-          }
-        }
-      },
-      {
-        "id": "S5_MORZĘCINO_ZACHÓD_121_1_WROCŁAW",
-        "name": "Morzęcino Zachód",
-        "reconciledFields": {
-          "hasRestaurant": {
-            "old": false,
-            "effective": true,
-            "reason": "existing OSM restaurant brand already confirmed gastronomy",
-            "evidence": [
-              "McDonald's"
-            ]
-          }
-        }
-      }
-    ],
+    "legacyOsmEnrichmentReconciliationCount": 0,
+    "legacyOsmEnrichmentFieldCounts": {},
+    "legacyOsmEnrichmentReconciliations": [],
     "serviceChangeMeaning": {
       "legacy_reconciliation": "service was already known from preserved OSM brand data",
       "effective_false_to_true": "GDDKiA reports a service not previously confirmed by app flags or preserved brands",
