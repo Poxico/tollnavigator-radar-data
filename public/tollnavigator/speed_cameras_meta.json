@@ -1,9 +1,9 @@
 {
-  "version": "2026-08-01",
-  "generated": "2026-08-01T05:36:51.942713+00:00",
+  "version": "2026-08-08",
+  "generated": "2026-08-08T03:43:59.448644+00:00",
   "source": "OpenStreetMap contributors, ODbL",
-  "count": 2709,
-  "count_fixed": 1927,
+  "count": 2712,
+  "count_fixed": 1930,
   "count_average": 782,
   "average_pairs": 391,
   "previous_count": 2709,
@@ -20,6 +20,6 @@
   "merge_preserved_opp_pairs": 0,
   "merge_missing_fixed_from_fresh": 1,
   "merge_missing_opp_pairs_from_fresh": 0,
-  "sha256": "d05c993cc9df6f7f9b0f98f480dd8ef8b77022c6fd4f1994bc0d9d6734bae6ff",
-  "meta_generated": "2026-08-01T05:36:52.009357+00:00"
+  "sha256": "591429771801dd7a9736e5e98c7c4d62cba7b84a235076b15e55b291b584b249",
+  "meta_generated": "2026-08-08T03:43:59.532287+00:00"
 }
