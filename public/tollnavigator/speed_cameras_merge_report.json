@@ -5,24 +5,26 @@
   "fresh_count": 2711,
   "fresh_fixed": 1929,
   "fresh_average": 782,
-  "previous_count": 2709,
-  "previous_fixed": 1927,
+  "previous_count": 2712,
+  "previous_fixed": 1930,
   "previous_average": 782,
-  "missing_fixed_from_fresh": 1,
+  "missing_fixed_from_fresh": 3,
   "missing_opp_pairs_from_fresh": 0,
   "too_many_missing_fixed_warning": false,
   "too_many_missing_opp_warning": false,
   "warnings": [],
-  "preserved_fixed": 1,
+  "preserved_fixed": 3,
   "preserved_opp_pairs": 0,
   "preserved_fixed_ids": [
-    "sc_4124127513"
+    "sc_13983576120",
+    "sc_4124127513",
+    "sc_4281051357"
   ],
   "preserved_opp_pair_ids": [],
   "manual_removed_ids": [],
   "manual_removed_opp_pair_ids": [],
-  "result_count": 2712,
-  "result_fixed": 1930,
+  "result_count": 2714,
+  "result_fixed": 1932,
   "result_average": 782,
   "result_opp_pairs": 391
 }
