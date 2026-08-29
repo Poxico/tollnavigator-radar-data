@@ -1,9 +1,9 @@
 {
-  "generated": "2026-08-22T03:08:00.818319+00:00",
-  "average_relations_total": 422,
-  "average_relations_ok": 391,
+  "generated": "2026-08-29T09:03:45.409745+00:00",
+  "average_relations_total": 424,
+  "average_relations_ok": 393,
   "average_relations_skipped": 31,
-  "fixed_duplicates_removed": 186,
+  "fixed_duplicates_removed": 188,
   "removed_fixed_duplicates": [
     {
       "id": "sc_21420719",
@@ -1101,6 +1101,18 @@
       "id": "sc_13936928634",
       "lat": 49.6577986,
       "lon": 18.4281346,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14121892664",
+      "lat": 49.7459465,
+      "lon": 18.6188135,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14121892665",
+      "lat": 49.7468646,
+      "lon": 18.6115452,
       "reason": "member_of_successful_opp"
     },
     {
@@ -3878,6 +3890,18 @@
       "status": "ok",
       "method": "explicit_from_to",
       "length_m": 10391.8
+    },
+    {
+      "relation_id": 21279383,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 532.1
+    },
+    {
+      "relation_id": 21279384,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 532.1
     }
   ]
 }
