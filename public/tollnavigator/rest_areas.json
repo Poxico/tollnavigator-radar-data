@@ -1,8 +1,8 @@
 {
-  "version": "2026-08-01",
-  "generated": "2026-08-01T06:42:50Z",
+  "version": "2026-09-01",
+  "generated": "2026-09-01T09:27:28Z",
   "source": "GDDKiA official MOP workbook",
-  "count": 415,
+  "count": 418,
   "rest_areas": [
     {
       "id": "S8_JEŻEWO_618_26_BIAŁYSTOK",
@@ -24,28 +24,6 @@
       "brands": [],
       "fuelBrands": [
         "Orlen"
-      ]
-    },
-    {
-      "id": "S8_RADULE_621_4_WARSZAWA",
-      "name": "Radule",
-      "motorway": "S8",
-      "km": 621.4,
-      "lat": 53.144893,
-      "lon": 22.793501,
-      "direction": "Warszawa",
-      "category": "Parking prywatny",
-      "hasFuel": true,
-      "hasRestaurant": true,
-      "hasHotel": true,
-      "hasEV": false,
-      "hasToilet": true,
-      "hasShower": true,
-      "parkingCar": 60,
-      "parkingTruck": 250,
-      "brands": [],
-      "fuelBrands": [
-        "Shell"
       ]
     },
     {
@@ -2959,6 +2937,46 @@
       "fuelBrands": []
     },
     {
+      "name": "Kolonia Sitnik Południe",
+      "motorway": "A2",
+      "km": 615.7,
+      "lat": 52.0649,
+      "lon": 23.0018333,
+      "direction": "Granica Państwa",
+      "category": "MOP funkcja podstawowa",
+      "parkingCar": 55,
+      "parkingTruck": 36,
+      "hasToilet": true,
+      "hasFuel": false,
+      "hasRestaurant": false,
+      "hasHotel": false,
+      "hasEV": false,
+      "hasShower": true,
+      "id": "A2_KOLONIA_SITNIK_POUDNIE_615_7_GRANICA_PANSTWA",
+      "brands": [],
+      "fuelBrands": []
+    },
+    {
+      "name": "Kolonia Sitnik Północ",
+      "motorway": "A2",
+      "km": 615.7,
+      "lat": 52.0666667,
+      "lon": 23.0031111,
+      "direction": "Warszawa",
+      "category": "MOP funkcja podstawowa",
+      "parkingCar": 55,
+      "parkingTruck": 36,
+      "hasToilet": true,
+      "hasFuel": false,
+      "hasRestaurant": false,
+      "hasHotel": false,
+      "hasEV": false,
+      "hasShower": true,
+      "id": "A2_KOLONIA_SITNIK_PONOC_615_7_WARSZAWA",
+      "brands": [],
+      "fuelBrands": []
+    },
+    {
       "id": "A1_KRZYŻANÓW_ZACHÓD_258_5_KATOWICE",
       "name": "Krzyżanów Zachód",
       "motorway": "A1",
@@ -5107,7 +5125,7 @@
       "hasHotel": true,
       "hasEV": false,
       "hasToilet": true,
-      "hasShower": false,
+      "hasShower": true,
       "parkingCar": 42,
       "parkingTruck": 39,
       "brands": [
@@ -7001,26 +7019,6 @@
       ]
     },
     {
-      "id": "S7_PROMNA_KOLONIA_435_55_WARSZAWA",
-      "name": "Promna Kolonia",
-      "motorway": "S7",
-      "km": 435.55,
-      "lat": 51.693699,
-      "lon": 20.932931,
-      "direction": "Warszawa",
-      "category": "Parking prywatny",
-      "hasFuel": false,
-      "hasRestaurant": true,
-      "hasHotel": false,
-      "hasEV": true,
-      "hasToilet": true,
-      "hasShower": false,
-      "parkingCar": 7,
-      "parkingTruck": 4,
-      "brands": [],
-      "fuelBrands": []
-    },
-    {
       "id": "S7_SUCHA_WSCHODNIA_444_6_WARSZAWA",
       "name": "Sucha Wschodnia",
       "motorway": "S7",
@@ -7757,6 +7755,26 @@
       "hasShower": true,
       "parkingCar": 128,
       "parkingTruck": 56,
+      "brands": [],
+      "fuelBrands": []
+    },
+    {
+      "name": "Modlin",
+      "motorway": "S7",
+      "km": 146.65,
+      "lat": 52.445636,
+      "lon": 20.611877,
+      "direction": "Gdańsk",
+      "category": "MOP funkcja podstawowa",
+      "parkingCar": 70,
+      "parkingTruck": 57,
+      "hasToilet": true,
+      "hasFuel": false,
+      "hasRestaurant": false,
+      "hasHotel": false,
+      "hasEV": false,
+      "hasShower": true,
+      "id": "S7_MODLIN_146_65_GDANSK",
       "brands": [],
       "fuelBrands": []
     },
@@ -8951,6 +8969,48 @@
       "hasShower": true,
       "parkingCar": 65,
       "parkingTruck": 30,
+      "brands": [],
+      "fuelBrands": []
+    },
+    {
+      "id": "S8_RADULE_621_4_WARSZAWA",
+      "name": "Radule",
+      "motorway": "S8",
+      "km": 621.4,
+      "lat": 53.144893,
+      "lon": 22.793501,
+      "direction": "Warszawa",
+      "category": "Parking prywatny",
+      "hasFuel": true,
+      "hasRestaurant": true,
+      "hasHotel": true,
+      "hasEV": false,
+      "hasToilet": true,
+      "hasShower": true,
+      "parkingCar": 60,
+      "parkingTruck": 250,
+      "brands": [],
+      "fuelBrands": [
+        "Shell"
+      ]
+    },
+    {
+      "id": "S7_PROMNA_KOLONIA_435_55_WARSZAWA",
+      "name": "Promna Kolonia",
+      "motorway": "S7",
+      "km": 435.55,
+      "lat": 51.693699,
+      "lon": 20.932931,
+      "direction": "Warszawa",
+      "category": "Parking prywatny",
+      "hasFuel": false,
+      "hasRestaurant": true,
+      "hasHotel": false,
+      "hasEV": true,
+      "hasToilet": true,
+      "hasShower": false,
+      "parkingCar": 7,
+      "parkingTruck": 4,
       "brands": [],
       "fuelBrands": []
     }

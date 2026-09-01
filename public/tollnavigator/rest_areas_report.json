@@ -1,20 +1,21 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-01T06:42:50Z",
+  "generatedAt": "2026-09-01T09:27:28Z",
   "mode": "published_safe_update",
   "productionDatabaseModified": true,
   "source": {
     "pageUrl": "https://www.gov.pl/web/gddkia/wykaz-parkingow-i-mop",
-    "attachmentUrl": "https://www.gov.pl/attachment/90b3c5c4-ab7b-43a8-8229-7dade64f09f6",
-    "attachmentLabel": "Tabela MOP - marzec 2026 r. Tabela​_MOP​_istniejące​_marzec​_2026.xlsx 0.08MB",
-    "size": 83239,
-    "sha256": "9ef6540c5532a41cd381a550904bc242221c0fb7f2c3af74e89fff6d558b6002"
+    "attachmentUrl": "https://www.gov.pl/attachment/2762404f-b3f8-47b6-abc7-d732dcb783fa",
+    "attachmentLabel": "Tabela MOP - czerwiec 2026 r. Tabela​_MOP​_istniejące​_czerwiec​_2026.xlsx 0.08MB",
+    "size": 86458,
+    "sha256": "906cd04b4270bbe92e411ca3fc6262a93c7947331b924603d60b8b42526a377a"
   },
   "workbook": {
     "sheet": "Arkusz1",
-    "rowCount": 416,
-    "columnCount": 34,
+    "rowCount": 417,
+    "columnCount": 35,
     "headers": [
+      "Lp.",
       "Oddział",
       "Województwo",
       "Zarządca",
@@ -50,12 +51,12 @@
       "Możliwość tankowania LNG",
       "Rampy do odśnieżania"
     ],
-    "parsedCount": 415,
+    "parsedCount": 416,
     "rowIssues": [],
     "targetCategories": {
-      "MOP funkcja komercyjna": 215,
+      "MOP funkcja komercyjna": 218,
       "MOP funkcja podstawowa": 122,
-      "Parking prywatny": 72,
+      "Parking prywatny": 70,
       "parking": 6
     }
   },
@@ -63,19 +64,63 @@
     "matchCounts": {
       "coordinate": 4,
       "exact": 333,
-      "road_km_direction": 78
+      "new": 3,
+      "road_km_direction": 76
     },
-    "sourceCount": 415,
+    "sourceCount": 416,
     "previousCount": 415,
-    "candidateCount": 415,
-    "matchedPreviousCount": 415,
-    "newSourceCount": 0,
-    "preservedMissingPreviousCount": 0,
-    "changedRecordCount": 82,
-    "blockedDestructiveRecordCount": 10,
+    "candidateCount": 418,
+    "matchedPreviousCount": 413,
+    "newSourceCount": 3,
+    "preservedMissingPreviousCount": 2,
+    "changedRecordCount": 81,
+    "blockedDestructiveRecordCount": 13,
     "duplicateIds": [],
-    "unmatchedSource": [],
-    "preservedMissingPrevious": [],
+    "unmatchedSource": [
+      {
+        "sourceRow": 139,
+        "name": "Kolonia Sitnik Południe",
+        "motorway": "A2",
+        "km": 615.7,
+        "direction": "Granica Państwa",
+        "lat": 52.0649,
+        "lon": 23.0018333
+      },
+      {
+        "sourceRow": 140,
+        "name": "Kolonia Sitnik Północ",
+        "motorway": "A2",
+        "km": 615.7,
+        "direction": "Warszawa",
+        "lat": 52.0666667,
+        "lon": 23.0031111
+      },
+      {
+        "sourceRow": 362,
+        "name": "Modlin",
+        "motorway": "S7",
+        "km": 146.65,
+        "direction": "Gdańsk",
+        "lat": 52.445636,
+        "lon": 20.611877
+      }
+    ],
+    "preservedMissingPrevious": [
+      {
+        "id": "S8_RADULE_621_4_WARSZAWA",
+        "name": "Radule",
+        "motorway": "S8",
+        "km": 621.4,
+        "direction": "Warszawa"
+      },
+      {
+        "id": "S7_PROMNA_KOLONIA_435_55_WARSZAWA",
+        "name": "Promna Kolonia",
+        "motorway": "S7",
+        "km": 435.55,
+        "direction": "Warszawa"
+      }
+    ],
     "changes": [
       {
         "id": "S8_JEŻEWO_618_26_BIAŁYSTOK",
@@ -92,24 +137,10 @@
         "targetCategory": "Parking prywatny"
       },
       {
-        "id": "S8_RADULE_621_4_WARSZAWA",
-        "name": "OOUR",
-        "method": "road_km_direction",
-        "sourceRow": 3,
-        "changes": {
-          "name": {
-            "old": "Radule",
-            "new": "OOUR"
-          }
-        },
-        "parkingBus": 20,
-        "targetCategory": "Parking prywatny"
-      },
-      {
         "id": "S8_ZŁOTORIA_631_15_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 4,
+        "sourceRow": 3,
         "changes": {
           "name": {
             "old": "Złotoria",
@@ -123,7 +154,7 @@
         "id": "S8_SZUMOWO_566_46_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 16,
+        "sourceRow": 15,
         "changes": {
           "name": {
             "old": "Szumowo",
@@ -137,7 +168,7 @@
         "id": "S10_BIAŁE_BŁOTA_0_9_SZCZECIN",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 49,
+        "sourceRow": 48,
         "changes": {
           "name": {
             "old": "Białe Błota",
@@ -151,7 +182,7 @@
         "id": "S1_SOSNOWIEC_538_01_ZWARDOŃ",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 76,
+        "sourceRow": 75,
         "changes": {
           "name": {
             "old": "Sosnowiec",
@@ -165,7 +196,7 @@
         "id": "S1_LĘDZINY_558_394_ZWARDOŃ",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 77,
+        "sourceRow": 76,
         "changes": {
           "name": {
             "old": "Lędziny",
@@ -179,7 +210,7 @@
         "id": "S1_SOSNOWIEC_541_348_PYRZOWICE",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 78,
+        "sourceRow": 77,
         "changes": {
           "name": {
             "old": "Sosnowiec",
@@ -193,7 +224,7 @@
         "id": "S1_LĘDZINY_558_445_PYRZOWICE",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 79,
+        "sourceRow": 78,
         "changes": {
           "name": {
             "old": "Lędziny",
@@ -207,7 +238,7 @@
         "id": "S52_JASIENICA_24_6_CIESZYN",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 80,
+        "sourceRow": 79,
         "changes": {
           "name": {
             "old": "Jasienica",
@@ -221,7 +252,7 @@
         "id": "S52_ŚWIĘTOSZÓWKA_22_01_BIELSKO-BIAŁA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 81,
+        "sourceRow": 80,
         "changes": {
           "name": {
             "old": "Świętoszówka",
@@ -235,7 +266,7 @@
         "id": "S52_POGÓRZE_17_51_BIELSKO-BIAŁA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 82,
+        "sourceRow": 81,
         "changes": {
           "name": {
             "old": "Pogórze",
@@ -249,7 +280,7 @@
         "id": "S52_OGRODZONA_6_504_CIESZYN",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 83,
+        "sourceRow": 82,
         "changes": {
           "name": {
             "old": "Ogrodzona",
@@ -263,7 +294,7 @@
         "id": "S52_GUMNA_6_432_BIELSKO-BIAŁA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 84,
+        "sourceRow": 83,
         "changes": {
           "name": {
             "old": "Gumna",
@@ -277,7 +308,7 @@
         "id": "S52_CIESZYN_3_077_CIESZYN",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 85,
+        "sourceRow": 84,
         "changes": {
           "name": {
             "old": "Cieszyn",
@@ -291,7 +322,7 @@
         "id": "S52_CIESZYN_2_849_BIELSKO-BIAŁA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 86,
+        "sourceRow": 85,
         "changes": {
           "name": {
             "old": "Cieszyn",
@@ -305,7 +336,7 @@
         "id": "S7_WYSTĘPA_16_5_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 101,
+        "sourceRow": 100,
         "changes": {
           "name": {
             "old": "Występa",
@@ -319,7 +350,7 @@
         "id": "S7_MOCZYDŁO_0_7_KIELCE",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 119,
+        "sourceRow": 118,
         "changes": {
           "name": {
             "old": "Moczydło",
@@ -333,7 +364,7 @@
         "id": "S8_PIOTRKÓW_TRYB_327_5_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 173,
+        "sourceRow": 174,
         "changes": {
           "name": {
             "old": "Piotrków Tryb",
@@ -347,7 +378,7 @@
         "id": "S8_PIOTRKÓW_TRYB_327_6_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 174,
+        "sourceRow": 175,
         "changes": {
           "name": {
             "old": "Piotrków Tryb",
@@ -361,7 +392,7 @@
         "id": "S8_PROSZENIE_335_1_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 175,
+        "sourceRow": 176,
         "changes": {
           "name": {
             "old": "Proszenie",
@@ -375,7 +406,7 @@
         "id": "S8_STUDZIANKI_343_1_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 176,
+        "sourceRow": 177,
         "changes": {
           "name": {
             "old": "Studzianki",
@@ -389,7 +420,7 @@
         "id": "S8_STUDZIANKI_343_75_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 177,
+        "sourceRow": 178,
         "changes": {
           "name": {
             "old": "Studzianki",
@@ -403,7 +434,7 @@
         "id": "S8_STUDZIANKI_344_4_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 178,
+        "sourceRow": 179,
         "changes": {
           "name": {
             "old": "Studzianki",
@@ -417,7 +448,7 @@
         "id": "S8_LECHÓW_367_72_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 179,
+        "sourceRow": 180,
         "changes": {
           "name": {
             "old": "Lechów",
@@ -431,7 +462,7 @@
         "id": "S8_WÓLKA_JAGIELCZYŃSKA_373_66_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 180,
+        "sourceRow": 181,
         "changes": {
           "name": {
             "old": "Wólka Jagielczyńska",
@@ -445,7 +476,7 @@
         "id": "S8_PODLAS_380_53_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 181,
+        "sourceRow": 182,
         "changes": {
           "name": {
             "old": "Podlas",
@@ -459,7 +490,7 @@
         "id": "S8_PODLAS_380_66_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 182,
+        "sourceRow": 183,
         "changes": {
           "name": {
             "old": "Podlas",
@@ -473,7 +504,7 @@
         "id": "S8_PROSZENIE_335_05_WROCŁAW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 183,
+        "sourceRow": 184,
         "changes": {
           "name": {
             "old": "Proszenie",
@@ -487,7 +518,7 @@
         "id": "S8_PROSZENIE_335_17_WROCŁAW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 184,
+        "sourceRow": 185,
         "changes": {
           "name": {
             "old": "Proszenie",
@@ -501,7 +532,7 @@
         "id": "S8_WOLBÓRZ_340_8_WROCŁAW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 185,
+        "sourceRow": 186,
         "changes": {
           "name": {
             "old": "Wolbórz",
@@ -515,7 +546,7 @@
         "id": "S8_STUDZIANKI_343_5_WROCŁAW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 186,
+        "sourceRow": 187,
         "changes": {
           "name": {
             "old": "Studzianki",
@@ -529,7 +560,7 @@
         "id": "S8_STUDZIANKI_346_0_WROCŁAW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 187,
+        "sourceRow": 188,
         "changes": {
           "name": {
             "old": "Studzianki",
@@ -543,7 +574,7 @@
         "id": "S8_JADWIGÓW_348_3_WROCŁAW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 188,
+        "sourceRow": 189,
         "changes": {
           "name": {
             "old": "Jadwigów",
@@ -557,7 +588,7 @@
         "id": "S8_JAKUBÓW_358_9_WROCŁAW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 189,
+        "sourceRow": 190,
         "changes": {
           "name": {
             "old": "Jakubów",
@@ -571,7 +602,7 @@
         "id": "S8_CZERNIEWICE_369_94_WROCŁAW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 190,
+        "sourceRow": 191,
         "changes": {
           "name": {
             "old": "Czerniewice",
@@ -585,7 +616,7 @@
         "id": "S8_WÓLKA_JAGIELCZYŃSKA_372_5_WROCŁAW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 191,
+        "sourceRow": 192,
         "changes": {
           "name": {
             "old": "Wólka Jagielczyńska",
@@ -599,7 +630,7 @@
         "id": "S8_PODLAS_380_8_WROCŁAW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 192,
+        "sourceRow": 193,
         "changes": {
           "name": {
             "old": "Podlas",
@@ -613,7 +644,7 @@
         "id": "S8_HUTA_ZAWADZKA_408_1_WROCŁAW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 193,
+        "sourceRow": 194,
         "changes": {
           "name": {
             "old": "Huta Zawadzka",
@@ -627,7 +658,7 @@
         "id": "S7_NOWE_POLE_80_49_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 194,
+        "sourceRow": 195,
         "changes": {
           "name": {
             "old": "Nowe Pole",
@@ -641,7 +672,7 @@
         "id": "S7_ELBLĄG_0_525_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 195,
+        "sourceRow": 196,
         "changes": {
           "name": {
             "old": "Elbląg",
@@ -655,7 +686,7 @@
         "id": "S7_RZECZNA_13_622_GDAŃSK",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 196,
+        "sourceRow": 197,
         "changes": {
           "name": {
             "old": "Rzeczna",
@@ -669,7 +700,7 @@
         "id": "S7_WITRAMOWO_14_085_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 204,
+        "sourceRow": 205,
         "changes": {
           "name": {
             "old": "Witramowo",
@@ -683,7 +714,7 @@
         "id": "s7_OSTRÓDA_64_34_GDAŃSK",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 205,
+        "sourceRow": 206,
         "changes": {
           "name": {
             "old": "Ostróda",
@@ -694,10 +725,24 @@
         "targetCategory": "Parking prywatny"
       },
       {
+        "id": "A2_ŁĘKA_287_35_WARSZAWA",
+        "name": "Łęka",
+        "method": "exact",
+        "sourceRow": 240,
+        "changes": {
+          "hasShower": {
+            "old": false,
+            "new": true
+          }
+        },
+        "parkingBus": 3,
+        "targetCategory": "MOP funkcja komercyjna"
+      },
+      {
         "id": "S3_ŻDŻARY_67_353_ŚWINOUJUŚCIE",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 289,
+        "sourceRow": 290,
         "changes": {
           "name": {
             "old": "Żdżary",
@@ -711,7 +756,7 @@
         "id": "S3_ŁOZIENICA_71_7_GORZÓW_WLKP",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 290,
+        "sourceRow": 291,
         "changes": {
           "name": {
             "old": "Łozienica",
@@ -725,7 +770,7 @@
         "id": "A6_BARNISŁAW_0_95_BERLIN",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 291,
+        "sourceRow": 292,
         "changes": {
           "name": {
             "old": "Barnisław",
@@ -739,7 +784,7 @@
         "id": "A6_BARNISŁAW_0_95_SZCZECIN",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 292,
+        "sourceRow": 293,
         "changes": {
           "name": {
             "old": "Barnisław",
@@ -753,7 +798,7 @@
         "id": "A6_KOŁBASKOWO_3_0_BERLIN",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 293,
+        "sourceRow": 294,
         "changes": {
           "name": {
             "old": "Kołbaskowo",
@@ -767,7 +812,7 @@
         "id": "S7_WORÓW_413_8_KRAKÓW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 320,
+        "sourceRow": 321,
         "changes": {
           "name": {
             "old": "Worów",
@@ -781,7 +826,7 @@
         "id": "S7_GRÓJEC_415_2_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 321,
+        "sourceRow": 322,
         "changes": {
           "name": {
             "old": "Grójec",
@@ -795,7 +840,7 @@
         "id": "S7_SKURÓW_419_525_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 322,
+        "sourceRow": 323,
         "changes": {
           "name": {
             "old": "Skurów",
@@ -809,7 +854,7 @@
         "id": "S7_SKURÓW_419_582_KRAKÓW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 323,
+        "sourceRow": 324,
         "changes": {
           "name": {
             "old": "Skurów",
@@ -823,7 +868,7 @@
         "id": "S7_BRONISZEW_429_5_KRAKÓW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 324,
+        "sourceRow": 325,
         "changes": {
           "name": {
             "old": "Broniszew",
@@ -837,7 +882,7 @@
         "id": "S7_BRONISZEW_429_7_WARSZAWA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 325,
+        "sourceRow": 326,
         "changes": {
           "name": {
             "old": "Broniszew",
@@ -851,20 +896,6 @@
         "id": "S7_PROMNA_KOLONIA_435_0_KRAKÓW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 326,
-        "changes": {
-          "name": {
-            "old": "Promna Kolonia",
-            "new": "OOUR"
-          }
-        },
-        "parkingBus": 4,
-        "targetCategory": "Parking prywatny"
-      },
-      {
-        "id": "S7_PROMNA_KOLONIA_435_55_WARSZAWA",
-        "name": "OOUR",
-        "method": "road_km_direction",
         "sourceRow": 327,
         "changes": {
           "name": {
@@ -872,7 +903,7 @@
             "new": "OOUR"
           }
         },
-        "parkingBus": 2,
+        "parkingBus": 4,
         "targetCategory": "Parking prywatny"
       },
       {
@@ -1089,7 +1120,7 @@
         "id": "A4_OLEŚNICA_MAŁA_183_987_WROCŁAW",
         "name": "Oleśnica Mała",
         "method": "coordinate",
-        "sourceRow": 365,
+        "sourceRow": 366,
         "changes": {
           "direction": {
             "old": "Wrocław",
@@ -1103,7 +1134,7 @@
         "id": "A4_WITOWICE_183_887_KATOWICE",
         "name": "Witowice",
         "method": "coordinate",
-        "sourceRow": 366,
+        "sourceRow": 367,
         "changes": {
           "direction": {
             "old": "Katowice",
@@ -1117,7 +1148,7 @@
         "id": "A4_KRZYWA_63_66_ZGORZELEC_OLSZYNA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 389,
+        "sourceRow": 390,
         "changes": {
           "name": {
             "old": "Krzywa",
@@ -1131,7 +1162,7 @@
         "id": "A4_STRUPICE_76_3_WROCŁAW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 390,
+        "sourceRow": 391,
         "changes": {
           "name": {
             "old": "Strupice",
@@ -1145,7 +1176,7 @@
         "id": "A4_PAWLIKOWICE_76_7_ZGORZELEC_OLSZYNA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 391,
+        "sourceRow": 392,
         "changes": {
           "name": {
             "old": "Pawlikowice",
@@ -1159,7 +1190,7 @@
         "id": "A4_GNIEWOMIERZ_96_52_ZGORZELEC_OLSZYNA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 392,
+        "sourceRow": 393,
         "changes": {
           "name": {
             "old": "Gniewomierz",
@@ -1173,7 +1204,7 @@
         "id": "A4_JAROSŁAW_120_015_WROCŁAW",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 393,
+        "sourceRow": 394,
         "changes": {
           "name": {
             "old": "Jarosław",
@@ -1187,7 +1218,7 @@
         "id": "A4_PIOTROWCE_129_89_ZGORZELEC_OLSZYNA",
         "name": "OOUR",
         "method": "road_km_direction",
-        "sourceRow": 394,
+        "sourceRow": 395,
         "changes": {
           "name": {
             "old": "Piotrowce",
@@ -1201,7 +1232,7 @@
         "id": "S3_RACULA_WSCHÓD_197_8_KOŁBASKOWO",
         "name": "Racula Wschód",
         "method": "coordinate",
-        "sourceRow": 411,
+        "sourceRow": 412,
         "changes": {
           "direction": {
             "old": "Kołbaskowo",
@@ -1215,7 +1246,7 @@
         "id": "S3_RACULA_ZACHÓD_197_8_WROCŁAW",
         "name": "Racula Zachód",
         "method": "coordinate",
-        "sourceRow": 412,
+        "sourceRow": 413,
         "changes": {
           "direction": {
             "old": "Wrocław",
@@ -1228,10 +1259,36 @@
     ],
     "blockedDestructiveChanges": [
       {
+        "id": "A1_KRZYŻANÓW_ZACHÓD_258_5_KATOWICE",
+        "name": "Krzyżanów Zachód",
+        "method": "exact",
+        "sourceRow": 141,
+        "blockedChanges": {
+          "hasEV": {
+            "old": true,
+            "source": false,
+            "applied": false
+          }
+        }
+      },
+      {
+        "id": "A1_KRZYŻANÓW_WSCHÓD_258_5_GDAŃSK",
+        "name": "Krzyżanów Wschód",
+        "method": "exact",
+        "sourceRow": 142,
+        "blockedChanges": {
+          "hasEV": {
+            "old": true,
+            "source": false,
+            "applied": false
+          }
+        }
+      },
+      {
         "id": "A2_CHRZĄSTÓW_PÓŁNOC_331_0_POZNAŃ",
         "name": "Chrząstów Północ",
         "method": "exact",
-        "sourceRow": 153,
+        "sourceRow": 154,
         "blockedChanges": {
           "hasHotel": {
             "old": true,
@@ -1244,7 +1301,20 @@
         "id": "A2_OSIECZA_POŁUDNIE_251_1_WARSZAWA",
         "name": "Osiecza Południe",
         "method": "exact",
-        "sourceRow": 234,
+        "sourceRow": 235,
+        "blockedChanges": {
+          "hasHotel": {
+            "old": true,
+            "source": false,
+            "applied": false
+          }
+        }
+      },
+      {
+        "id": "A2_ŁĘKA_287_35_WARSZAWA",
+        "name": "Łęka",
+        "method": "exact",
+        "sourceRow": 240,
         "blockedChanges": {
           "hasHotel": {
             "old": true,
@@ -1257,7 +1327,7 @@
         "id": "S5_FOLWARK_103_5_WROCŁAW",
         "name": "Folwark",
         "method": "exact",
-        "sourceRow": 251,
+        "sourceRow": 252,
         "blockedChanges": {
           "hasHotel": {
             "old": true,
@@ -1270,7 +1340,7 @@
         "id": "S6_WYSZOGÓRA_ZACHÓD_35_4_SZCZECIN",
         "name": "Wyszogóra Zachód",
         "method": "exact",
-        "sourceRow": 302,
+        "sourceRow": 303,
         "blockedChanges": {
           "hasFuel": {
             "old": true,
@@ -1283,32 +1353,9 @@
         "id": "S6_WYSZOGÓRA_WSCHÓD_34_8_KOSZALIN",
         "name": "Wyszogóra Wschód",
         "method": "exact",
-        "sourceRow": 303,
+        "sourceRow": 304,
         "blockedChanges": {
           "hasFuel": {
-            "old": true,
-            "source": false,
-            "applied": false
-          }
-        }
-      },
-      {
-        "id": "S7_PROMNA_KOLONIA_435_55_WARSZAWA",
-        "name": "OOUR",
-        "method": "road_km_direction",
-        "sourceRow": 327,
-        "blockedChanges": {
-          "hasToilet": {
-            "old": true,
-            "source": false,
-            "applied": false
-          },
-          "hasRestaurant": {
-            "old": true,
-            "source": false,
-            "applied": false
-          },
-          "hasEV": {
             "old": true,
             "source": false,
             "applied": false
@@ -1360,10 +1407,33 @@
         }
       },
       {
+        "id": "S17_MROKÓW_66_0_WARSZAWA",
+        "name": "Mroków",
+        "method": "exact",
+        "sourceRow": 359,
+        "blockedChanges": {
+          "hasFuel": {
+            "old": true,
+            "source": false,
+            "applied": false
+          },
+          "hasRestaurant": {
+            "old": true,
+            "source": false,
+            "applied": false
+          },
+          "hasHotel": {
+            "old": true,
+            "source": false,
+            "applied": false
+          }
+        }
+      },
+      {
         "id": "S5_MORZĘCINO_ZACHÓD_121_1_WROCŁAW",
         "name": "Morzęcino Zachód",
         "method": "exact",
-        "sourceRow": 378,
+        "sourceRow": 379,
         "blockedChanges": {
           "hasRestaurant": {
             "old": true,
@@ -1375,19 +1445,19 @@
     ],
     "fieldChangeCounts": {
       "direction": 4,
-      "name": 78
+      "hasShower": 1,
+      "name": 76
     },
     "blockedServiceChangeCounts": {
-      "hasEV": 1,
-      "hasFuel": 3,
-      "hasHotel": 3,
+      "hasEV": 2,
+      "hasFuel": 4,
+      "hasHotel": 5,
       "hasRestaurant": 3,
-      "hasShower": 2,
-      "hasToilet": 1
+      "hasShower": 2
     },
     "blockedMetadataChangeCounts": {
       "direction": 4,
-      "name": 78
+      "name": 76
     },
     "blockedMetadataChanges": [
       {
@@ -1396,18 +1466,6 @@
         "blockedChanges": {
           "name": {
             "old": "Jeżewo",
-            "source": "OOUR",
-            "applied": false,
-            "reason": "source name is generic and less informative"
-          }
-        }
-      },
-      {
-        "id": "S8_RADULE_621_4_WARSZAWA",
-        "name": "Radule",
-        "blockedChanges": {
-          "name": {
-            "old": "Radule",
             "source": "OOUR",
             "applied": false,
             "reason": "source name is generic and less informative"
@@ -2063,18 +2121,6 @@
         }
       },
       {
-        "id": "S7_PROMNA_KOLONIA_435_55_WARSZAWA",
-        "name": "Promna Kolonia",
-        "blockedChanges": {
-          "name": {
-            "old": "Promna Kolonia",
-            "source": "OOUR",
-            "applied": false,
-            "reason": "source name is generic and less informative"
-          }
-        }
-      },
-      {
         "id": "S7_SUCHA_WSCHODNIA_444_6_WARSZAWA",
         "name": "Sucha Wschodnia",
         "blockedChanges": {
@@ -2375,10 +2421,265 @@
         }
       }
     ],
-    "blockedMetadataRecordCount": 82,
-    "effectiveChangedRecordCount": 0,
-    "effectiveFieldChangeCounts": {},
-    "effectiveChanges": [],
+    "blockedMetadataRecordCount": 80,
+    "effectiveChangedRecordCount": 4,
+    "effectiveFieldChangeCounts": {
+      "brands": 3,
+      "category": 3,
+      "direction": 3,
+      "fuelBrands": 3,
+      "hasEV": 3,
+      "hasFuel": 3,
+      "hasHotel": 3,
+      "hasRestaurant": 3,
+      "hasShower": 4,
+      "hasToilet": 3,
+      "km": 3,
+      "lat": 3,
+      "lon": 3,
+      "motorway": 3,
+      "name": 3,
+      "parkingCar": 3,
+      "parkingTruck": 3
+    },
+    "effectiveChanges": [
+      {
+        "id": "A2_KOLONIA_SITNIK_POUDNIE_615_7_GRANICA_PANSTWA",
+        "name": "Kolonia Sitnik Południe",
+        "type": "new",
+        "changes": {
+          "name": {
+            "old": null,
+            "new": "Kolonia Sitnik Południe"
+          },
+          "motorway": {
+            "old": null,
+            "new": "A2"
+          },
+          "km": {
+            "old": null,
+            "new": 615.7
+          },
+          "lat": {
+            "old": null,
+            "new": 52.0649
+          },
+          "lon": {
+            "old": null,
+            "new": 23.0018333
+          },
+          "direction": {
+            "old": null,
+            "new": "Granica Państwa"
+          },
+          "category": {
+            "old": null,
+            "new": "MOP funkcja podstawowa"
+          },
+          "hasFuel": {
+            "old": null,
+            "new": false
+          },
+          "hasRestaurant": {
+            "old": null,
+            "new": false
+          },
+          "hasHotel": {
+            "old": null,
+            "new": false
+          },
+          "hasEV": {
+            "old": null,
+            "new": false
+          },
+          "hasToilet": {
+            "old": null,
+            "new": true
+          },
+          "hasShower": {
+            "old": null,
+            "new": true
+          },
+          "parkingCar": {
+            "old": null,
+            "new": 55
+          },
+          "parkingTruck": {
+            "old": null,
+            "new": 36
+          },
+          "brands": {
+            "old": null,
+            "new": []
+          },
+          "fuelBrands": {
+            "old": null,
+            "new": []
+          }
+        }
+      },
+      {
+        "id": "A2_KOLONIA_SITNIK_PONOC_615_7_WARSZAWA",
+        "name": "Kolonia Sitnik Północ",
+        "type": "new",
+        "changes": {
+          "name": {
+            "old": null,
+            "new": "Kolonia Sitnik Północ"
+          },
+          "motorway": {
+            "old": null,
+            "new": "A2"
+          },
+          "km": {
+            "old": null,
+            "new": 615.7
+          },
+          "lat": {
+            "old": null,
+            "new": 52.0666667
+          },
+          "lon": {
+            "old": null,
+            "new": 23.0031111
+          },
+          "direction": {
+            "old": null,
+            "new": "Warszawa"
+          },
+          "category": {
+            "old": null,
+            "new": "MOP funkcja podstawowa"
+          },
+          "hasFuel": {
+            "old": null,
+            "new": false
+          },
+          "hasRestaurant": {
+            "old": null,
+            "new": false
+          },
+          "hasHotel": {
+            "old": null,
+            "new": false
+          },
+          "hasEV": {
+            "old": null,
+            "new": false
+          },
+          "hasToilet": {
+            "old": null,
+            "new": true
+          },
+          "hasShower": {
+            "old": null,
+            "new": true
+          },
+          "parkingCar": {
+            "old": null,
+            "new": 55
+          },
+          "parkingTruck": {
+            "old": null,
+            "new": 36
+          },
+          "brands": {
+            "old": null,
+            "new": []
+          },
+          "fuelBrands": {
+            "old": null,
+            "new": []
+          }
+        }
+      },
+      {
+        "id": "A2_ŁĘKA_287_35_WARSZAWA",
+        "name": "Łęka",
+        "type": "updated",
+        "changes": {
+          "hasShower": {
+            "old": false,
+            "new": true
+          }
+        }
+      },
+      {
+        "id": "S7_MODLIN_146_65_GDANSK",
+        "name": "Modlin",
+        "type": "new",
+        "changes": {
+          "name": {
+            "old": null,
+            "new": "Modlin"
+          },
+          "motorway": {
+            "old": null,
+            "new": "S7"
+          },
+          "km": {
+            "old": null,
+            "new": 146.65
+          },
+          "lat": {
+            "old": null,
+            "new": 52.445636
+          },
+          "lon": {
+            "old": null,
+            "new": 20.611877
+          },
+          "direction": {
+            "old": null,
+            "new": "Gdańsk"
+          },
+          "category": {
+            "old": null,
+            "new": "MOP funkcja podstawowa"
+          },
+          "hasFuel": {
+            "old": null,
+            "new": false
+          },
+          "hasRestaurant": {
+            "old": null,
+            "new": false
+          },
+          "hasHotel": {
+            "old": null,
+            "new": false
+          },
+          "hasEV": {
+            "old": null,
+            "new": false
+          },
+          "hasToilet": {
+            "old": null,
+            "new": true
+          },
+          "hasShower": {
+            "old": null,
+            "new": true
+          },
+          "parkingCar": {
+            "old": null,
+            "new": 70
+          },
+          "parkingTruck": {
+            "old": null,
+            "new": 57
+          },
+          "brands": {
+            "old": null,
+            "new": []
+          },
+          "fuelBrands": {
+            "old": null,
+            "new": []
+          }
+        }
+      }
+    ],
     "effectiveRemovedRecordCount": 0,
     "effectiveRemovedRecords": [],
     "legacyOsmEnrichmentReconciliationCount": 0,
@@ -2391,5 +2692,5 @@
     }
   },
   "safeToConsiderPublishing": true,
-  "publishedAt": "2026-08-01T06:42:50Z"
+  "publishedAt": "2026-09-01T09:27:28Z"
 }
