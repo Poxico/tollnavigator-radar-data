@@ -1,9 +1,9 @@
 {
-  "generated": "2026-09-12T07:10:07.284974+00:00",
+  "generated": "2026-09-19T07:21:10.913162+00:00",
   "average_relations_total": 424,
   "average_relations_ok": 393,
   "average_relations_skipped": 31,
-  "fixed_duplicates_removed": 188,
+  "fixed_duplicates_removed": 187,
   "removed_fixed_duplicates": [
     {
       "id": "sc_21420719",
@@ -975,12 +975,6 @@
       "id": "sc_11936984450",
       "lat": 50.5181777,
       "lon": 16.2141681,
-      "reason": "member_of_successful_opp"
-    },
-    {
-      "id": "sc_11987452233",
-      "lat": 49.21779,
-      "lon": 17.6200085,
       "reason": "member_of_successful_opp"
     },
     {
