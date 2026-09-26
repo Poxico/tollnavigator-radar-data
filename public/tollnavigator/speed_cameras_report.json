@@ -1,9 +1,9 @@
 {
-  "generated": "2026-09-19T07:21:10.913162+00:00",
-  "average_relations_total": 424,
-  "average_relations_ok": 393,
+  "generated": "2026-09-26T07:42:19.084254+00:00",
+  "average_relations_total": 426,
+  "average_relations_ok": 395,
   "average_relations_skipped": 31,
-  "fixed_duplicates_removed": 187,
+  "fixed_duplicates_removed": 191,
   "removed_fixed_duplicates": [
     {
       "id": "sc_21420719",
@@ -1107,6 +1107,30 @@
       "id": "sc_14121892665",
       "lat": 49.7468646,
       "lon": 18.6115452,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14206515641",
+      "lat": 54.8877952,
+      "lon": 23.9337795,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14206515642",
+      "lat": 54.888004,
+      "lon": 23.9340809,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14206515643",
+      "lat": 54.8975407,
+      "lon": 23.9556474,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14206515644",
+      "lat": 54.8976323,
+      "lon": 23.9555974,
       "reason": "member_of_successful_opp"
     },
     {
@@ -3896,6 +3920,18 @@
       "status": "ok",
       "method": "explicit_from_to",
       "length_m": 532.1
+    },
+    {
+      "relation_id": 21427363,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1743.4
+    },
+    {
+      "relation_id": 21427366,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1769.2
     }
   ]
 }
