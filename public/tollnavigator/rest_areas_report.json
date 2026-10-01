@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-01T09:27:28Z",
+  "generatedAt": "2026-10-01T11:00:23Z",
   "mode": "published_safe_update",
   "productionDatabaseModified": true,
   "source": {
@@ -63,48 +63,19 @@
   "comparison": {
     "matchCounts": {
       "coordinate": 4,
-      "exact": 333,
-      "new": 3,
+      "exact": 336,
       "road_km_direction": 76
     },
     "sourceCount": 416,
-    "previousCount": 415,
+    "previousCount": 418,
     "candidateCount": 418,
-    "matchedPreviousCount": 413,
-    "newSourceCount": 3,
+    "matchedPreviousCount": 416,
+    "newSourceCount": 0,
     "preservedMissingPreviousCount": 2,
-    "changedRecordCount": 81,
+    "changedRecordCount": 80,
     "blockedDestructiveRecordCount": 13,
     "duplicateIds": [],
-    "unmatchedSource": [
-      {
-        "sourceRow": 139,
-        "name": "Kolonia Sitnik Południe",
-        "motorway": "A2",
-        "km": 615.7,
-        "direction": "Granica Państwa",
-        "lat": 52.0649,
-        "lon": 23.0018333
-      },
-      {
-        "sourceRow": 140,
-        "name": "Kolonia Sitnik Północ",
-        "motorway": "A2",
-        "km": 615.7,
-        "direction": "Warszawa",
-        "lat": 52.0666667,
-        "lon": 23.0031111
-      },
-      {
-        "sourceRow": 362,
-        "name": "Modlin",
-        "motorway": "S7",
-        "km": 146.65,
-        "direction": "Gdańsk",
-        "lat": 52.445636,
-        "lon": 20.611877
-      }
-    ],
+    "unmatchedSource": [],
     "preservedMissingPrevious": [
       {
         "id": "S8_RADULE_621_4_WARSZAWA",
@@ -723,20 +694,6 @@
         },
         "parkingBus": 10,
         "targetCategory": "Parking prywatny"
-      },
-      {
-        "id": "A2_ŁĘKA_287_35_WARSZAWA",
-        "name": "Łęka",
-        "method": "exact",
-        "sourceRow": 240,
-        "changes": {
-          "hasShower": {
-            "old": false,
-            "new": true
-          }
-        },
-        "parkingBus": 3,
-        "targetCategory": "MOP funkcja komercyjna"
       },
       {
         "id": "S3_ŻDŻARY_67_353_ŚWINOUJUŚCIE",
@@ -1445,7 +1402,6 @@
     ],
     "fieldChangeCounts": {
       "direction": 4,
-      "hasShower": 1,
       "name": 76
     },
     "blockedServiceChangeCounts": {
@@ -2422,264 +2378,9 @@
       }
     ],
     "blockedMetadataRecordCount": 80,
-    "effectiveChangedRecordCount": 4,
-    "effectiveFieldChangeCounts": {
-      "brands": 3,
-      "category": 3,
-      "direction": 3,
-      "fuelBrands": 3,
-      "hasEV": 3,
-      "hasFuel": 3,
-      "hasHotel": 3,
-      "hasRestaurant": 3,
-      "hasShower": 4,
-      "hasToilet": 3,
-      "km": 3,
-      "lat": 3,
-      "lon": 3,
-      "motorway": 3,
-      "name": 3,
-      "parkingCar": 3,
-      "parkingTruck": 3
-    },
-    "effectiveChanges": [
-      {
-        "id": "A2_KOLONIA_SITNIK_POUDNIE_615_7_GRANICA_PANSTWA",
-        "name": "Kolonia Sitnik Południe",
-        "type": "new",
-        "changes": {
-          "name": {
-            "old": null,
-            "new": "Kolonia Sitnik Południe"
-          },
-          "motorway": {
-            "old": null,
-            "new": "A2"
-          },
-          "km": {
-            "old": null,
-            "new": 615.7
-          },
-          "lat": {
-            "old": null,
-            "new": 52.0649
-          },
-          "lon": {
-            "old": null,
-            "new": 23.0018333
-          },
-          "direction": {
-            "old": null,
-            "new": "Granica Państwa"
-          },
-          "category": {
-            "old": null,
-            "new": "MOP funkcja podstawowa"
-          },
-          "hasFuel": {
-            "old": null,
-            "new": false
-          },
-          "hasRestaurant": {
-            "old": null,
-            "new": false
-          },
-          "hasHotel": {
-            "old": null,
-            "new": false
-          },
-          "hasEV": {
-            "old": null,
-            "new": false
-          },
-          "hasToilet": {
-            "old": null,
-            "new": true
-          },
-          "hasShower": {
-            "old": null,
-            "new": true
-          },
-          "parkingCar": {
-            "old": null,
-            "new": 55
-          },
-          "parkingTruck": {
-            "old": null,
-            "new": 36
-          },
-          "brands": {
-            "old": null,
-            "new": []
-          },
-          "fuelBrands": {
-            "old": null,
-            "new": []
-          }
-        }
-      },
-      {
-        "id": "A2_KOLONIA_SITNIK_PONOC_615_7_WARSZAWA",
-        "name": "Kolonia Sitnik Północ",
-        "type": "new",
-        "changes": {
-          "name": {
-            "old": null,
-            "new": "Kolonia Sitnik Północ"
-          },
-          "motorway": {
-            "old": null,
-            "new": "A2"
-          },
-          "km": {
-            "old": null,
-            "new": 615.7
-          },
-          "lat": {
-            "old": null,
-            "new": 52.0666667
-          },
-          "lon": {
-            "old": null,
-            "new": 23.0031111
-          },
-          "direction": {
-            "old": null,
-            "new": "Warszawa"
-          },
-          "category": {
-            "old": null,
-            "new": "MOP funkcja podstawowa"
-          },
-          "hasFuel": {
-            "old": null,
-            "new": false
-          },
-          "hasRestaurant": {
-            "old": null,
-            "new": false
-          },
-          "hasHotel": {
-            "old": null,
-            "new": false
-          },
-          "hasEV": {
-            "old": null,
-            "new": false
-          },
-          "hasToilet": {
-            "old": null,
-            "new": true
-          },
-          "hasShower": {
-            "old": null,
-            "new": true
-          },
-          "parkingCar": {
-            "old": null,
-            "new": 55
-          },
-          "parkingTruck": {
-            "old": null,
-            "new": 36
-          },
-          "brands": {
-            "old": null,
-            "new": []
-          },
-          "fuelBrands": {
-            "old": null,
-            "new": []
-          }
-        }
-      },
-      {
-        "id": "A2_ŁĘKA_287_35_WARSZAWA",
-        "name": "Łęka",
-        "type": "updated",
-        "changes": {
-          "hasShower": {
-            "old": false,
-            "new": true
-          }
-        }
-      },
-      {
-        "id": "S7_MODLIN_146_65_GDANSK",
-        "name": "Modlin",
-        "type": "new",
-        "changes": {
-          "name": {
-            "old": null,
-            "new": "Modlin"
-          },
-          "motorway": {
-            "old": null,
-            "new": "S7"
-          },
-          "km": {
-            "old": null,
-            "new": 146.65
-          },
-          "lat": {
-            "old": null,
-            "new": 52.445636
-          },
-          "lon": {
-            "old": null,
-            "new": 20.611877
-          },
-          "direction": {
-            "old": null,
-            "new": "Gdańsk"
-          },
-          "category": {
-            "old": null,
-            "new": "MOP funkcja podstawowa"
-          },
-          "hasFuel": {
-            "old": null,
-            "new": false
-          },
-          "hasRestaurant": {
-            "old": null,
-            "new": false
-          },
-          "hasHotel": {
-            "old": null,
-            "new": false
-          },
-          "hasEV": {
-            "old": null,
-            "new": false
-          },
-          "hasToilet": {
-            "old": null,
-            "new": true
-          },
-          "hasShower": {
-            "old": null,
-            "new": true
-          },
-          "parkingCar": {
-            "old": null,
-            "new": 70
-          },
-          "parkingTruck": {
-            "old": null,
-            "new": 57
-          },
-          "brands": {
-            "old": null,
-            "new": []
-          },
-          "fuelBrands": {
-            "old": null,
-            "new": []
-          }
-        }
-      }
-    ],
+    "effectiveChangedRecordCount": 0,
+    "effectiveFieldChangeCounts": {},
+    "effectiveChanges": [],
     "effectiveRemovedRecordCount": 0,
     "effectiveRemovedRecords": [],
     "legacyOsmEnrichmentReconciliationCount": 0,
@@ -2692,5 +2393,5 @@
     }
   },
   "safeToConsiderPublishing": true,
-  "publishedAt": "2026-09-01T09:27:28Z"
+  "publishedAt": "2026-10-01T11:00:23Z"
 }
