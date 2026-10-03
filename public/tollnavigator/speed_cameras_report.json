@@ -1,9 +1,9 @@
 {
-  "generated": "2026-09-26T07:42:19.084254+00:00",
-  "average_relations_total": 426,
-  "average_relations_ok": 395,
-  "average_relations_skipped": 31,
-  "fixed_duplicates_removed": 191,
+  "generated": "2026-10-03T08:11:45.378843+00:00",
+  "average_relations_total": 425,
+  "average_relations_ok": 397,
+  "average_relations_skipped": 28,
+  "fixed_duplicates_removed": 192,
   "removed_fixed_duplicates": [
     {
       "id": "sc_21420719",
@@ -33,6 +33,12 @@
       "id": "sc_2571209129",
       "lat": 50.001858,
       "lon": 14.3954141,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_3406730052",
+      "lat": 50.3004668,
+      "lon": 19.1238916,
       "reason": "member_of_successful_opp"
     },
     {
@@ -1625,7 +1631,7 @@
       "relation_id": 13485968,
       "status": "ok",
       "method": "explicit_from_to",
-      "length_m": 3977.2
+      "length_m": 3977.1
     },
     {
       "relation_id": 13486243,
@@ -3011,31 +3017,10 @@
       "section_endpoints": []
     },
     {
-      "relation_id": 18639413,
-      "status": "skipped",
-      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
-      "from_points": [],
-      "to_points": [],
-      "device_points": [],
-      "section_endpoints": []
-    },
-    {
       "relation_id": 18639414,
-      "status": "skipped",
-      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
-      "from_points": [],
-      "to_points": [],
-      "device_points": [],
-      "section_endpoints": []
-    },
-    {
-      "relation_id": 18639415,
-      "status": "skipped",
-      "reason": "Nie udało się wyznaczyć dwóch różnych punktów i pewnego kierunku OPP",
-      "from_points": [],
-      "to_points": [],
-      "device_points": [],
-      "section_endpoints": []
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 657.3
     },
     {
       "relation_id": 18641725,
@@ -3932,6 +3917,12 @@
       "status": "ok",
       "method": "explicit_from_to",
       "length_m": 1769.2
+    },
+    {
+      "relation_id": 21454307,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 175.3
     }
   ]
 }
