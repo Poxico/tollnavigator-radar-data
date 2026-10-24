@@ -2,8 +2,8 @@
   "merge_enabled": true,
   "max_missing_opp_pairs": 1,
   "max_missing_fixed_cameras": 3,
-  "fresh_count": 2740,
-  "fresh_fixed": 1946,
+  "fresh_count": 2742,
+  "fresh_fixed": 1948,
   "fresh_average": 794,
   "previous_count": 2754,
   "previous_fixed": 1960,
@@ -36,8 +36,8 @@
   "preserved_opp_pair_ids": [],
   "manual_removed_ids": [],
   "manual_removed_opp_pair_ids": [],
-  "result_count": 2754,
-  "result_fixed": 1960,
+  "result_count": 2756,
+  "result_fixed": 1962,
   "result_average": 794,
   "result_opp_pairs": 397
 }
