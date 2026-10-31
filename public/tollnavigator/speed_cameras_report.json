@@ -1,9 +1,9 @@
 {
-  "generated": "2026-10-24T07:18:30.843540+00:00",
-  "average_relations_total": 425,
-  "average_relations_ok": 397,
+  "generated": "2026-10-31T08:27:02.008910+00:00",
+  "average_relations_total": 431,
+  "average_relations_ok": 403,
   "average_relations_skipped": 28,
-  "fixed_duplicates_removed": 192,
+  "fixed_duplicates_removed": 209,
   "removed_fixed_duplicates": [
     {
       "id": "sc_21420719",
@@ -250,6 +250,12 @@
       "lat": 50.2158388,
       "lon": 15.030695,
       "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_7958953563",
+      "lat": 50.6068542,
+      "lon": 15.8413484,
+      "reason": "near_opp_endpoint"
     },
     {
       "id": "sc_8499213944",
@@ -1002,6 +1008,18 @@
       "reason": "member_of_successful_opp"
     },
     {
+      "id": "sc_12285358790",
+      "lat": 50.6564619,
+      "lon": 15.6018112,
+      "reason": "near_opp_endpoint"
+    },
+    {
+      "id": "sc_12285402822",
+      "lat": 50.6428459,
+      "lon": 15.609065,
+      "reason": "near_opp_endpoint"
+    },
+    {
       "id": "sc_12438518705",
       "lat": 50.4545239,
       "lon": 16.1333803,
@@ -1074,6 +1092,12 @@
       "reason": "member_of_successful_opp"
     },
     {
+      "id": "sc_13235378124",
+      "lat": 50.5957504,
+      "lon": 15.8044599,
+      "reason": "near_opp_endpoint"
+    },
+    {
       "id": "sc_13309700796",
       "lat": 49.5390957,
       "lon": 15.3768051,
@@ -1084,6 +1108,12 @@
       "lat": 49.5430736,
       "lon": 15.3906812,
       "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_13337226497",
+      "lat": 50.5974901,
+      "lon": 15.8269519,
+      "reason": "near_opp_endpoint"
     },
     {
       "id": "sc_13429315271",
@@ -1137,6 +1167,78 @@
       "id": "sc_14206515644",
       "lat": 54.8976323,
       "lon": 23.9555974,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14321285195",
+      "lat": 50.6428341,
+      "lon": 15.6091367,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14321285196",
+      "lat": 50.6564567,
+      "lon": 15.601892,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14321786370",
+      "lat": 50.6428672,
+      "lon": 15.608986,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14321786371",
+      "lat": 50.6564799,
+      "lon": 15.6017285,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14323630961",
+      "lat": 50.6065865,
+      "lon": 15.8433387,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14323630962",
+      "lat": 50.6069388,
+      "lon": 15.8410473,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14323630963",
+      "lat": 50.6068793,
+      "lon": 15.841024,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14323630964",
+      "lat": 50.6065027,
+      "lon": 15.8433082,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14323663693",
+      "lat": 50.5956936,
+      "lon": 15.8044464,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14323663694",
+      "lat": 50.5974694,
+      "lon": 15.8270376,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14323663695",
+      "lat": 50.5975226,
+      "lon": 15.8270372,
+      "reason": "member_of_successful_opp"
+    },
+    {
+      "id": "sc_14323663696",
+      "lat": 50.5957514,
+      "lon": 15.8043559,
       "reason": "member_of_successful_opp"
     },
     {
@@ -3923,6 +4025,42 @@
       "status": "ok",
       "method": "explicit_from_to",
       "length_m": 175.3
+    },
+    {
+      "relation_id": 21800519,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1598.6
+    },
+    {
+      "relation_id": 21801437,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1597.8
+    },
+    {
+      "relation_id": 21811363,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 166.4
+    },
+    {
+      "relation_id": 21811364,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 166.5
+    },
+    {
+      "relation_id": 21811415,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1606.8
+    },
+    {
+      "relation_id": 21811416,
+      "status": "ok",
+      "method": "explicit_from_to",
+      "length_m": 1613.0
     }
   ]
 }
